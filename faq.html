@@ -151,6 +151,19 @@
 
           <details class="border-b border-[#E5E5E5] group">
             <summary class="flex items-start justify-between gap-4 py-5">
+              <span class="text-[15px] font-medium text-[#111111] leading-snug">O que está incluído no meu contrato?</span>
+              <span class="faq-icon text-[#F97316] text-[18px] font-light leading-none flex-shrink-0 mt-0.5">+</span>
+            </summary>
+            <div class="pb-6 text-[14px] leading-[1.8] text-[#555555] space-y-3">
+              <p>Vale separar duas coisas que costumam ser confundidas.</p>
+              <p><strong class="text-[#111111] font-semibold">O que a plataforma suporta</strong> é tudo o que está no catálogo de <a href="integracoes.html" class="text-[#F97316] font-medium">possibilidades de integração</a>: fluxos nas duas direções, automações internas e integrações com sistemas de terceiros.</p>
+              <p><strong class="text-[#111111] font-semibold">O que o seu contrato cobre</strong> é o conjunto de fluxos definido no levantamento do seu projeto. Pode ser só uma direção, pode ser um punhado de fluxos, e isso é normal: quase nenhuma empresa contrata o catálogo inteiro.</p>
+              <p>Quem define a fronteira é o documento de mapeamento aprovado ao final da primeira etapa. Ele diz exatamente o que será integrado, em qual direção e com quais regras. Fluxos que não estiverem nele são cotados separadamente, e é justamente isso que evita discussão de escopo no meio do projeto.</p>
+            </div>
+          </details>
+
+          <details class="border-b border-[#E5E5E5] group">
+            <summary class="flex items-start justify-between gap-4 py-5">
               <span class="text-[15px] font-medium text-[#111111] leading-snug">A troca acontece por arquivo, planilha ou PDF?</span>
               <span class="faq-icon text-[#F97316] text-[18px] font-light leading-none flex-shrink-0 mt-0.5">+</span>
             </summary>
@@ -384,6 +397,19 @@
             </div>
           </details>
 
+          <details id="parametrizar" class="border-b border-[#E5E5E5] group scroll-mt-28">
+            <summary class="flex items-start justify-between gap-4 py-5">
+              <span class="text-[15px] font-medium text-[#111111] leading-snug">As APIs já existem e o motor de mapeamento é pronto. Não é só parametrizar?</span>
+              <span class="faq-icon text-[#F97316] text-[18px] font-light leading-none flex-shrink-0 mt-0.5">+</span>
+            </summary>
+            <div class="pb-6 text-[14px] leading-[1.8] text-[#555555] space-y-3">
+              <p>Parte da pergunta está certa, e vale reconhecer o que de fato já existe: a plataforma. Recepção de eventos, execução, tentativas em caso de falha, auditoria e os conectores de comunicação com cada ERP estão prontos. É exatamente por isso que não cobramos o desenvolvimento de um middleware do zero, e isso já está refletido no preço.</p>
+              <p><strong class="text-[#111111] font-semibold">O que não existe pronto é a sua integração.</strong> Quais campos saem do PLM e para onde vão no seu ERP. Em qual formato. Com quais regras de obrigatoriedade. O que fazer quando o dado chega incompleto. Como a sua empresa nomeia coleção, linha e grupo, e como isso se traduz no cadastro do ERP.</p>
+              <p>Nada disso é configuração de tela. É levantamento, mapeamento, desenvolvimento, teste e homologação com a sua equipe, até o aceite.</p>
+              <p>A prova disso é simples: dois clientes com o mesmo ERP têm integrações diferentes, porque não usam o ERP do mesmo jeito.</p>
+            </div>
+          </details>
+
           <details class="border-b border-[#E5E5E5] group">
             <summary class="flex items-start justify-between gap-4 py-5">
               <span class="text-[15px] font-medium text-[#111111] leading-snug">Se o conector do meu ERP já existe, a implantação não é rápida?</span>
@@ -519,6 +545,19 @@
 
           <details class="border-b border-[#E5E5E5] group">
             <summary class="flex items-start justify-between gap-4 py-5">
+              <span class="text-[15px] font-medium text-[#111111] leading-snug">Por que uma plataforma, e não um desenvolvimento avulso?</span>
+              <span class="faq-icon text-[#F97316] text-[18px] font-light leading-none flex-shrink-0 mt-0.5">+</span>
+            </summary>
+            <div class="pb-6 text-[14px] leading-[1.8] text-[#555555] space-y-3">
+              <p>Porque integração não é um projeto que termina. Ela roda todo dia, e todo dia alguma coisa pode dar errado do outro lado: o ERP fora do ar, uma credencial que expira, um campo obrigatório que mudou, uma coleção com volume três vezes maior que o normal.</p>
+              <p>Um desenvolvimento sob encomenda resolve o dia da entrega. Depois disso, quando algo falha, é preciso encontrar quem escreveu aquilo e esperar disponibilidade.</p>
+              <p>Com a plataforma, o que continua depois da entrega é o que está incluso na mensalidade: execução contínua, painel com o status de cada sincronização, histórico de 90 dias com o que foi enviado e o que o ERP respondeu, reprocessamento automático e manual, alertas de falha e suporte.</p>
+              <p><strong class="text-[#111111] font-semibold">Na prática, isso significa que a integração não depende de uma pessoa específica.</strong> Nem da sua equipe, que muda, nem da nossa. Ela é um serviço em operação, não um entregável que alguém deixou na sua empresa.</p>
+            </div>
+          </details>
+
+          <details class="border-b border-[#E5E5E5] group">
+            <summary class="flex items-start justify-between gap-4 py-5">
               <span class="text-[15px] font-medium text-[#111111] leading-snug">Quem monitora a integração no dia a dia?</span>
               <span class="faq-icon text-[#F97316] text-[18px] font-light leading-none flex-shrink-0 mt-0.5">+</span>
             </summary>
@@ -560,7 +599,8 @@
               <span class="faq-icon text-[#F97316] text-[18px] font-light leading-none flex-shrink-0 mt-0.5">+</span>
             </summary>
             <div class="pb-6 text-[14px] leading-[1.8] text-[#555555] space-y-3">
-              <p>R$ 280 por mês, impostos inclusos, cobrado mensalmente. Inclui sincronismo bilateral, mapeamento configurável, histórico de 90 dias, alertas por e-mail, até 3 usuários, 2.000 requisições mensais, marcas ilimitadas, suporte por e-mail de segunda a sexta e um treinamento virtual de 1 hora.</p>
+              <p>R$ 280 por mês, impostos inclusos, cobrado mensalmente. Inclui a operação contínua das integrações contratadas, mapeamento configurável, histórico de 90 dias, alertas por e-mail, até 3 usuários, 2.000 requisições mensais, marcas ilimitadas, suporte de segunda a sexta e um treinamento virtual de 1 hora.</p>
+              <p>A mensalidade cobre a plataforma rodando. Quais fluxos rodam nela é o que o seu contrato define, e a plataforma suporta as duas direções mesmo quando o projeto contrata só uma.</p>
               <p>Usuário adicional: R$ 25 por mês. Detalhes em <a href="index.html#precos" class="text-[#F97316] font-medium">Preços</a>.</p>
               <p>Esses valores são por empresa. Marcas são ilimitadas dentro do mesmo CNPJ, mas cada CNPJ tem contrato, setup e mensalidade próprios.</p>
             </div>
@@ -576,6 +616,18 @@
               <p>A Integra Moda é a camada de integração entre o PLM Coleção Moda e o seu ERP. O PLM Coleção Moda é um produto de outra empresa, com mensalidades, taxas e condições próprias, definidas por ela. Somos parceiros comerciais, e não temos ingerência sobre a política de preços deles.</p>
               <p>O mesmo vale para o seu ERP: licenças e módulos são contratados diretamente com o fornecedor do sistema.</p>
               <p>Ou seja, para operar a integração a sua empresa precisa ter contrato ativo com o Coleção Moda, com o seu ERP e com a Integra Moda. O que cobramos cobre apenas a nossa parte.</p>
+            </div>
+          </details>
+
+          <details class="border-b border-[#E5E5E5] group">
+            <summary class="flex items-start justify-between gap-4 py-5">
+              <span class="text-[15px] font-medium text-[#111111] leading-snug">Vocês cobram por hora?</span>
+              <span class="faq-icon text-[#F97316] text-[18px] font-light leading-none flex-shrink-0 mt-0.5">+</span>
+            </summary>
+            <div class="pb-6 text-[14px] leading-[1.8] text-[#555555] space-y-3">
+              <p>Não. A implantação é precificada por escopo e entrega.</p>
+              <p>O que a sua empresa contrata é um resultado em produção: a integração funcionando, com prazo, testes, homologação, aceite e garantia. O risco de o trabalho render mais ou menos horas do que o previsto é nosso, não seu.</p>
+              <p>A tarifa de hora técnica existe, mas se aplica apenas a serviços adicionais depois da implantação: ajustes pontuais, atendimentos fora do escopo contratado e alterações pedidas após a aprovação do documento de mapeamento. Sempre com aprovação prévia da sua empresa, nunca como surpresa na fatura.</p>
             </div>
           </details>
 

@@ -110,6 +110,7 @@
     <section class="border-b border-[#E5E5E5] bg-[#FAFAFA] sticky top-14 z-40">
       <div class="max-w-5xl mx-auto px-4 md:px-8 py-4">
         <div class="flex flex-wrap gap-x-6 gap-y-2 justify-center">
+          <a href="#partida" class="text-[13px] text-[#888888] hover:text-[#F97316] transition-colors">Por onde começar</a>
           <a href="#inbound" class="text-[13px] text-[#888888] hover:text-[#F97316] transition-colors">ERP → PLM <span class="text-[#CCCCCC]">16</span></a>
           <a href="#outbound" class="text-[13px] text-[#888888] hover:text-[#F97316] transition-colors">PLM → ERP <span class="text-[#CCCCCC]">13</span></a>
           <a href="#terceiros" class="text-[13px] text-[#888888] hover:text-[#F97316] transition-colors">Além do ERP <span class="text-[#CCCCCC]">3</span></a>
@@ -126,9 +127,12 @@
           <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-4">Antes de tudo, três coisas importantes</p>
           <div class="space-y-5">
             <div>
-              <p class="text-[14px] font-semibold text-[#111111] mb-2">Isto é um catálogo de possibilidades, não uma lista de botões para ligar</p>
+              <p class="text-[14px] font-semibold text-[#111111] mb-2">Esta página mostra o que a plataforma suporta, não o que está no seu contrato</p>
               <p class="text-[14px] leading-[1.8] text-[#555555]">
-                Cada implantação é desenvolvida sob medida. O de-para entre o PLM Coleção Moda e o seu ERP é construído campo a campo, conforme as regras da sua empresa e o que o seu ERP disponibiliza. O conjunto exato de possibilidades depende disso, e itens fora desta lista podem ser avaliados caso a caso.
+                Cada projeto contrata um conjunto específico de fluxos, escolhido no levantamento e formalizado no documento de mapeamento aprovado antes do desenvolvimento começar. É esse documento que define o que será integrado, em qual direção e com quais regras. Fluxos fora dele são cotados separadamente.
+              </p>
+              <p class="text-[14px] leading-[1.8] text-[#555555] mt-2">
+                Cada implantação também é desenvolvida sob medida: o de-para entre o PLM Coleção Moda e o seu ERP é construído campo a campo, conforme as regras da sua empresa e o que o seu ERP disponibiliza. Itens fora desta lista podem ser avaliados caso a caso.
               </p>
             </div>
             <div>
@@ -148,6 +152,52 @@
       </div>
     </section>
 
+    <!-- PONTOS DE PARTIDA -->
+    <section id="partida" class="py-14 md:py-20 border-b border-[#E5E5E5] bg-[#F7F7F7] scroll-mt-28">
+      <div class="max-w-4xl mx-auto px-4 md:px-8">
+        <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3">Por onde começar</p>
+        <h2 class="text-[24px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-4">
+          Ninguém contrata o catálogo inteiro.
+        </h2>
+        <p class="text-[15px] leading-[1.8] text-[#555555] mb-10 max-w-2xl">
+          A lista completa está logo abaixo, mas quase todo projeto começa por um destes três blocos. Eles resolvem a maior parte da redigitação e são o ponto de partida mais comum. Os demais fluxos entram depois, conforme a prioridade da sua empresa.
+        </p>
+
+        <div class="space-y-4">
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 md:p-6">
+            <div class="flex items-baseline gap-3 mb-2">
+              <span class="text-[11px] font-semibold text-[#F97316] bg-[#FFF7ED] border border-[#FED7AA] px-2 py-0.5 rounded-full">Base</span>
+              <p class="text-[15px] font-semibold text-[#111111]">Base de implantação</p>
+            </div>
+            <p class="text-[14px] leading-[1.75] text-[#555555]">Estruturação do ambiente, autenticação nos dois lados, recepção de eventos, de-para base, tratamento de erros e homologação. Não é um fluxo de negócio, é o alicerce sobre o qual todos eles rodam. Está presente em qualquer projeto, e é feita uma vez só.</p>
+          </div>
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 md:p-6">
+            <div class="flex items-baseline gap-3 mb-2">
+              <span class="text-[11px] font-semibold text-[#888888] bg-[#F0F0F0] px-2 py-0.5 rounded-full">Fluxo</span>
+              <p class="text-[15px] font-semibold text-[#111111]">Ficha técnica gera o produto no ERP</p>
+            </div>
+            <p class="text-[14px] leading-[1.75] text-[#555555]">O produto desenvolvido no PLM é cadastrado no ERP com grade, cores, códigos e valores padrão, sem ninguém redigitar. Costuma ser o primeiro bloco porque é onde está o maior volume de digitação manual.</p>
+            <p class="text-[12px] text-[#888888] mt-3">Itens do catálogo: <a href="#outbound" class="text-[#F97316]">produto, tabela de medidas, ficha técnica e estrutura, código e SKU, imagens, ciclo de vida</a></p>
+          </div>
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 md:p-6">
+            <div class="flex items-baseline gap-3 mb-2">
+              <span class="text-[11px] font-semibold text-[#888888] bg-[#F0F0F0] px-2 py-0.5 rounded-full">Fluxo</span>
+              <p class="text-[15px] font-semibold text-[#111111]">Insumos e consumo entre os dois sistemas</p>
+            </div>
+            <p class="text-[14px] leading-[1.75] text-[#555555]">Materiais e aviamentos sincronizados, e o consumo por produto alimentando o ERP para gerar ordens e necessidades de compra. Aqui a direção precisa ser definida caso a caso: há empresas em que o insumo nasce no ERP e desce para o PLM, e empresas em que a composição nasce no PLM e sobe para o ERP.</p>
+            <p class="text-[12px] text-[#888888] mt-3">Itens do catálogo: <a href="#inbound" class="text-[#F97316]">insumos, preços, estoque, reservas</a> · <a href="#outbound" class="text-[#F97316]">insumos do produto, pré-cadastro de insumo, consumo</a></p>
+          </div>
+        </div>
+
+        <div class="mt-8 bg-white border border-[#E5E5E5] rounded-xl p-5 md:p-6 max-w-2xl">
+          <p class="text-[14px] font-semibold text-[#111111] mb-2">A base é sempre cobrada</p>
+          <p class="text-[14px] leading-[1.8] text-[#555555]">
+            Qualquer projeto, mesmo o menor, precisa da base de implantação inteira. É por isso que contratar um fluxo isolado não custa uma fração proporcional do projeto completo, e por isso que implantar em várias etapas sai mais caro no total do que implantar de uma vez.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- INBOUND -->
     <section id="inbound" class="py-14 md:py-20 border-b border-[#E5E5E5] scroll-mt-28">
       <div class="max-w-4xl mx-auto px-4 md:px-8">
@@ -158,8 +208,11 @@
         <h2 class="text-[24px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-4">
           Sua equipe trabalha com o dado oficial da gestão.
         </h2>
-        <p class="text-[15px] leading-[1.8] text-[#555555] mb-10 max-w-2xl">
+        <p class="text-[15px] leading-[1.8] text-[#555555] mb-4 max-w-2xl">
           Dados que saem do ERP e passam a estar disponíveis dentro do PLM Coleção Moda, sem ninguém redigitar. Nas linhas abaixo, insumo abrange tanto materiais, ou seja, tecidos e matérias-primas, quanto aviamentos.
+        </p>
+        <p class="text-[14px] leading-[1.8] text-[#666666] mb-10 max-w-2xl border-l-2 border-[#FED7AA] pl-4">
+          Insumo também percorre o caminho inverso. Se na sua empresa o material e a composição nascem no PLM e precisam chegar ao ERP, os itens correspondentes estão em <a href="#outbound" class="text-[#F97316] font-medium">Do PLM para o ERP</a>: insumos do produto, pré-cadastro de insumo e consumo. A direção de cada um é escolhida no levantamento.
         </p>
 
         <p class="text-[11px] text-[#999999] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#E5E5E5]">Insumos</p>
