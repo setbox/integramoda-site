@@ -19,9 +19,39 @@ Tailwind CSS and Inter font load via CDN — no npm install required.
 Single-page static marketing site for **Integra Moda** (PLM↔ERP integration platform by Setbox).
 
 - `index.html` — entire site, one file, structured as sequential sections
-- `assets/` — partner and product logos (PNG/SVG)
+- `assets/` — brand assets, partner and product logos (PNG/SVG)
+- `assets/brand/` — brand source and generators (`gen_svg.py`, `gen_icons.py`), see `assets/brand/README.md`
 - `DESIGN.md` — design reference (entire.io analysis used as visual inspiration)
 - Screenshots referenced from `../docs/biblioteca/prints/` (outside this repo)
+
+## Asset Placement Rules
+
+Where a file lives is decided by **who asks for it**, not by what it is.
+
+**Root is reserved** for files a browser or OS fetches at a fixed path without reading the HTML:
+
+| File | Who asks for it |
+|---|---|
+| `favicon.ico` | Browser requests `/favicon.ico` blindly — feeds, error pages, tab before HTML parses |
+| `apple-touch-icon.png` | iOS probes `/apple-touch-icon.png` at root when it finds no `<link>` |
+| `browserconfig.xml` | Legacy Edge/IE requests `/browserconfig.xml` at root by default |
+| `site.webmanifest` | Must be same-origin; root by convention |
+| `og-image.png` | Stays at root because the URL is already in shared links — moving it breaks the preview on re-scrape |
+
+**Everything else goes under `assets/`**, because it is reached through a declared path:
+
+- `assets/favicon/` — PNG favicons, android-chrome icons, maskable icon, mstile
+- `assets/` — brand SVG/PNG (`icon.svg`, `logo-simbolo*`, `logo-horizontal*`, `safari-pinned-tab.svg`), partner logos
+- `assets/brand/` — brand source and generators, not served
+- `assets/screenshots/` — product screenshots
+
+Rules to keep:
+
+- Never duplicate an icon in two places. One file, one path, referenced from wherever it is needed. This repo already shipped a broken manifest once by keeping copies in both root and `assets/favicon/`.
+- Icons are **generated, never hand-edited**: run `python3 assets/brand/gen_icons.py`. Editing a PNG by hand is lost on the next run.
+- Moving an icon means updating three places: the `<head>` of all three pages, `site.webmanifest` and `browserconfig.xml`.
+- Adding a page means copying the full `<head>` icon block from an existing page — the block is identical across all three.
+- After touching any path, serve locally and confirm every reference returns 200.
 
 ## Design System
 
