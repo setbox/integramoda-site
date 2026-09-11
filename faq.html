@@ -20,6 +20,7 @@
   <meta name="twitter:title" content="Perguntas frequentes - Integra Moda">
   <meta name="twitter:description" content="Respostas sobre compatibilidade de ERP, implantação, tratamento de falhas e escopo das integrações.">
   <meta name="twitter:image" content="https://integramoda.com.br/og-image.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -67,7 +68,7 @@
   <nav class="sticky top-0 z-50 bg-[#FAFAFA] border-b border-[#E5E5E5]">
     <div class="max-w-5xl mx-auto px-4 md:px-8 h-14 flex items-center justify-between">
       <a href="index.html" class="flex items-center gap-2.5">
-        <img src="assets/logo-simbolo.png" alt="" class="h-7 w-auto">
+        <img src="assets/logo-simbolo.svg" alt="" class="h-7 w-auto">
         <div class="leading-tight">
           <div class="text-[13px] font-semibold tracking-tight text-[#111111]">Integra Moda</div>
           <div class="text-[9px] text-[#BBBBBB] tracking-[0.1em] font-medium uppercase">PLM · ERP</div>
@@ -347,7 +348,7 @@
               <ul class="space-y-2">
                 <li class="flex gap-3"><span class="text-[#F97316] flex-shrink-0 font-bold">→</span><span>Credenciais de acesso ativas e validadas. No Coleção Moda, o token de integração liberado para a sua empresa. No ERP, endpoint e credenciais liberados pela sua equipe ou pelo fornecedor do sistema</span></li>
                 <li class="flex gap-3"><span class="text-[#F97316] flex-shrink-0 font-bold">→</span><span>Acesso às rotas necessárias, de leitura e de escrita, conforme os fluxos escolhidos. Acesso só de leitura não sustenta integração nas duas direções</span></li>
-                <li class="flex gap-3"><span class="text-[#F97316] flex-shrink-0 font-bold">→</span><span>Ambiente de homologação, para testar antes de ligar em produção</span></li>
+                <li class="flex gap-3"><span class="text-[#F97316] flex-shrink-0 font-bold">→</span><span>Ambiente de homologação do ERP, se houver. Na ausência, os testes são feitos em produção, com registros fictícios criados pela sua equipe</span></li>
                 <li class="flex gap-3"><span class="text-[#F97316] flex-shrink-0 font-bold">→</span><span>Um contato técnico de referência, seu ou do fornecedor, para resolver dúvida de acesso e de comportamento da API</span></li>
                 <li class="flex gap-3"><span class="text-[#F97316] flex-shrink-0 font-bold">→</span><span>Documentação técnica dos serviços disponíveis</span></li>
               </ul>
@@ -370,8 +371,8 @@
               <span class="faq-icon text-[#F97316] text-[18px] font-light leading-none flex-shrink-0 mt-0.5">+</span>
             </summary>
             <div class="pb-6 text-[14px] leading-[1.8] text-[#555555] space-y-3">
-              <p>Não. A implantação integra o que passa a acontecer a partir da entrada em produção: fichas novas e alterações que ocorrerem daí em diante.</p>
-              <p><strong class="text-[#111111] font-semibold">Carga em massa de histórico não faz parte do escopo de implantação.</strong> Isso vale para produtos de coleções anteriores, insumos já cadastrados, estruturas antigas e histórico de custo ou preço.</p>
+              <p>A implantação cobre a carga inicial dos cadastros ativos das integrações contratadas e tudo o que passar a ocorrer a partir da entrada em produção.</p>
+              <p><strong class="text-[#111111] font-semibold">Carga em massa de histórico não faz parte do escopo:</strong> registros inativos ou descontinuados, produtos de coleções anteriores, estruturas antigas e histórico de custo ou preço.</p>
               <p>Se a sua empresa precisar levar esse histórico de um sistema para o outro, avaliamos separadamente. É um trabalho com escopo, prazo e riscos próprios, contratado como aditivo ao contrato.</p>
               <p>Na prática, a maior parte das empresas não precisa: o que interessa integrar é a coleção que está em desenvolvimento agora, e o histórico segue consultável onde sempre esteve.</p>
             </div>
@@ -449,8 +450,8 @@
               <span class="faq-icon text-[#F97316] text-[18px] font-light leading-none flex-shrink-0 mt-0.5">+</span>
             </summary>
             <div class="pb-6 text-[14px] leading-[1.8] text-[#555555] space-y-3">
-              <p>Para um escopo padrão, o prazo de execução é de 14 dias úteis. A contagem começa a partir da confirmação de que todos os acessos técnicos foram recebidos, testados e estão funcionando, não da assinatura do contrato.</p>
-              <p>Essa distinção é importante e joga a favor dos dois lados: indisponibilidade, expiração ou limitação dos acessos suspendem a contagem enquanto durarem. Projetos com escopo maior têm o prazo definido na proposta.</p>
+              <p>O prazo é calculado a partir do escopo contratado: quantas integrações, em qual direção e com qual complexidade. O número exato fica na proposta, junto com o prazo de homologação.</p>
+              <p>A contagem começa na confirmação de que todos os acessos técnicos foram recebidos, testados e estão funcionando. Indisponibilidade ou expiração desses acessos suspende a contagem enquanto durar.</p>
             </div>
           </details>
 
@@ -740,8 +741,9 @@
               <span class="faq-icon text-[#F97316] text-[18px] font-light leading-none flex-shrink-0 mt-0.5">+</span>
             </summary>
             <div class="pb-6 text-[14px] leading-[1.8] text-[#555555] space-y-3">
-              <p>Sim. Três meses a partir da entrega, cobrindo a correção de defeitos da integração desenvolvida. A etapa de homologação também inclui dois ciclos de ajuste antes do aceite final.</p>
-              <p>Um limite honesto: mudanças feitas pelo fornecedor do seu ERP ou pelo PLM nas APIs deles não entram na garantia, porque não estão sob nosso controle. Nesses casos a adequação é avaliada e cotada à parte.</p>
+              <p>Sim. 90 dias corridos a partir do aceite, cobrindo a correção de defeitos da integração desenvolvida.</p>
+              <p>Durante a homologação não há limite de ciclos de correção: enquanto houver defeito, ele é corrigido. Considera-se defeito o comportamento divergente do documento de mapeamento aprovado no levantamento.</p>
+              <p>Mudança de API feita pelo fornecedor do seu ERP ou pelo PLM não é defeito da integração: é adequação nova, avaliada e cotada à parte.</p>
             </div>
           </details>
 
