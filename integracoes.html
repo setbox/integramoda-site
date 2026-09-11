@@ -133,7 +133,7 @@
                 Cada projeto contrata um conjunto específico de fluxos, escolhido no levantamento e formalizado no documento de mapeamento aprovado antes do desenvolvimento começar. É esse documento que define o que será integrado, em qual direção e com quais regras. Fluxos fora dele são cotados separadamente.
               </p>
               <p class="text-[14px] leading-[1.8] text-[#555555] mt-2">
-                Cada implantação também é desenvolvida sob medida: o de-para entre o PLM Coleção Moda e o seu ERP é construído campo a campo, conforme as regras da sua empresa e o que o seu ERP disponibiliza. Itens fora desta lista podem ser avaliados caso a caso.
+                Cada implantação também é desenvolvida sob medida: o mapeamento de campos entre o PLM Coleção Moda e o seu ERP é construído campo a campo, conforme as regras da sua empresa e o que o seu ERP disponibiliza. Itens fora desta lista podem ser avaliados caso a caso.
               </p>
             </div>
             <div>
@@ -170,7 +170,7 @@
               <span class="text-[11px] font-semibold text-[#F97316] bg-[#FFF7ED] border border-[#FED7AA] px-2 py-0.5 rounded-full">Base</span>
               <p class="text-[15px] font-semibold text-[#111111]">Base de implantação</p>
             </div>
-            <p class="text-[14px] leading-[1.75] text-[#555555]">Estruturação do ambiente, autenticação nos dois lados, recepção de eventos, de-para base, tratamento de erros e homologação. Não é um fluxo de negócio, é o alicerce sobre o qual todos eles rodam. Está presente em qualquer projeto, e é feita uma vez só.</p>
+            <p class="text-[14px] leading-[1.75] text-[#555555]">Estruturação do ambiente, autenticação nos dois lados, recepção de eventos, mapeamento de campos base, tratamento de erros e homologação. Não é um fluxo de negócio, é o alicerce sobre o qual todos eles rodam. Está presente em qualquer projeto, e é feita uma vez só.</p>
           </div>
           <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 md:p-6">
             <div class="flex items-baseline gap-3 mb-2">
@@ -288,7 +288,7 @@
           </div>
           <div class="row">
             <p class="text-[14px] font-semibold text-[#111111]">Cadastros já existentes</p>
-            <p class="text-[14px] leading-[1.75] text-[#555555]">A partir do código do produto, a Integra Moda consulta um cadastro que já existe no ERP e traz esses dados para os campos da ficha, sem que ninguém precise abrir o outro sistema. O caso típico é a referência do produto: a plataforma lê os campos dela e preenche os correspondentes na ficha do PLM, conforme o de-para definido na configuração.</p>
+            <p class="text-[14px] leading-[1.75] text-[#555555]">A partir do código do produto, a Integra Moda consulta um cadastro que já existe no ERP e traz esses dados para os campos da ficha, sem que ninguém precise abrir o outro sistema. O caso típico é a referência do produto: a plataforma lê os campos dela e preenche os correspondentes na ficha do PLM, conforme o mapeamento definido na configuração.</p>
           </div>
         </div>
       </div>
@@ -551,13 +551,13 @@
           </div>
           <div>
             <span class="text-[26px] font-bold text-[#C8C8C8] block mb-2">04</span>
-            <h3 class="text-[15px] font-semibold text-[#111111] mb-2">Construção do de-para</h3>
+            <h3 class="text-[15px] font-semibold text-[#111111] mb-2">Construção do Mapeamento de Campos</h3>
             <p class="text-[13px] leading-[1.75] text-[#666666]">Campo a campo, definimos qual informação do PLM corresponde a qual campo do seu ERP, com formatos, conversões de valores e regras de obrigatoriedade.</p>
           </div>
           <div>
             <span class="text-[26px] font-bold text-[#C8C8C8] block mb-2">05</span>
             <h3 class="text-[15px] font-semibold text-[#111111] mb-2">Desenvolvimento</h3>
-            <p class="text-[13px] leading-[1.75] text-[#666666]">Autenticação com a API do ERP e sincronização de protótipos, produtos, coleções, materiais, grades, preços e imagens, conforme o de-para aprovado.</p>
+            <p class="text-[13px] leading-[1.75] text-[#666666]">Autenticação com a API do ERP e sincronização de protótipos, produtos, coleções, materiais, grades, preços e imagens, conforme o Mapeamento de Campos aprovado.</p>
           </div>
           <div>
             <span class="text-[26px] font-bold text-[#C8C8C8] block mb-2">06</span>
@@ -567,7 +567,7 @@
         </div>
 
         <div class="mt-8 bg-white border border-[#E5E5E5] rounded-xl p-5 md:p-6 max-w-2xl">
-          <p class="text-[14px] font-semibold text-[#111111] mb-2">O de-para é o documento que define o escopo</p>
+          <p class="text-[14px] font-semibold text-[#111111] mb-2">O Mapeamento de Campos é o documento que define o escopo</p>
           <p class="text-[14px] leading-[1.8] text-[#555555]">
             O passo 04 é o mais trabalhoso e o mais importante dos seis. Ele é entregue como um documento de mapeamento, aprovado formalmente pela sua equipe antes do desenvolvimento começar. A partir dessa aprovação, todo mundo sabe exatamente o que a integração faz e o que não faz, e é isso que evita discussão de escopo no meio do projeto.
           </p>
