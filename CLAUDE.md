@@ -74,7 +74,7 @@ Rules to keep:
 
 - Language: Brazilian Portuguese
 - Never use em dash (—). Use hyphen (-) or comma instead.
-- All CTAs point to `mailto:contato@integramoda.com.br`
+- All CTAs point to `mailto:contato@setbox.com.br`
 - Partner logos use `.logo-partner` class (grayscale → color on hover)
 - Status badges: `text-green-700 bg-green-100` for "Disponível", `text-blue-700 bg-blue-50` for "Em breve"
 - Section labels: `text-[11px] text-[#F97316] font-semibold tracking-wide uppercase`
