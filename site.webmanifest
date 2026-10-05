@@ -6,7 +6,7 @@
     { "src": "/assets/favicon/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
     { "src": "/assets/favicon/android-chrome-maskable-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
   ],
-  "theme_color": "#F97316",
+  "theme_color": "#FB0D1C",
   "background_color": "#FAFAFA",
   "display": "browser"
 }

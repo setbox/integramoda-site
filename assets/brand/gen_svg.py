@@ -10,7 +10,7 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 ASSETS = os.path.dirname(HERE)
 
-FONT = f'{HERE}/fonts/Inter.ttf'
+FONT = f'{HERE}/fonts/Manrope.ttf'
 MARK_SVG = sys.argv[1] if len(sys.argv) > 1 else f'{HERE}/mark-trace.svg'
 
 NAME = 'Integra Moda'
@@ -22,7 +22,7 @@ GAP = int(M * 0.16)
 SIZE_NAME = int(M * 0.44)
 TRACK_NAME = M * 0.44 * -0.015
 
-ORANGE = '#FF5C01'
+RED = '#FB0D1C'
 
 
 def instance_coords(style):
@@ -88,7 +88,7 @@ def mark_group(tx, ty, target):
     transform = re.search(r'<g transform="([^"]+)"', src).group(1)
     paths = re.findall(r'<path d="([^"]+)"', src)
     k = target / vb
-    inner = ''.join(f'<path fill="{ORANGE}" d="{d}"/>' for d in paths)
+    inner = ''.join(f'<path fill="{RED}" d="{d}"/>' for d in paths)
     return (f'<g transform="translate({tx} {ty}) scale({k:.6f}) {transform}">{inner}</g>')
 
 
@@ -112,7 +112,7 @@ def build(out, name_color, with_text=True):
         body = mark_group(PAD + (M - mark) / 2, PAD + (M - mark) / 2, mark)
         body += ''.join(bold.run(
             NAME, SIZE_NAME, TRACK_NAME, tx, base_n,
-            lambda c: ORANGE if c >= highlight else name_color)[0])
+            lambda c: RED if c >= highlight else name_color)[0])
 
     svg = (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w} {h}" '
            f'width="{w}" height="{h}" fill="none">{body}</svg>')
@@ -122,5 +122,5 @@ def build(out, name_color, with_text=True):
 
 if __name__ == '__main__':
     build(f'{ASSETS}/logo-simbolo.svg', None, with_text=False)
-    build(f'{ASSETS}/logo-horizontal.svg', '#1A1A1A')
+    build(f'{ASSETS}/logo-horizontal.svg', '#000000')
     build(f'{ASSETS}/logo-horizontal-dark.svg', '#FFFFFF')

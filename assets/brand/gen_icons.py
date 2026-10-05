@@ -9,7 +9,7 @@ ROOT = os.path.dirname(ASSETS)
 B64 = f'{HERE}/base64'
 ICONS = f'{ASSETS}/favicon'
 
-ORANGE = '#FF5C01'
+RED = '#FB0D1C'
 WHITE = '#FFFFFF'
 RADIUS = 0.22
 
@@ -38,11 +38,11 @@ def svg(size, body):
 
 def icon_svg(size=1024, inset=0.72, rounded=True):
     r = f' rx="{size * RADIUS:.1f}"' if rounded else ''
-    bg = f'<rect width="{size}" height="{size}"{r} fill="{ORANGE}"/>'
+    bg = f'<rect width="{size}" height="{size}"{r} fill="{RED}"/>'
     return svg(size, bg + mark_group(size, inset, WHITE))
 
 
-def symbol_svg(size=512, fill=ORANGE):
+def symbol_svg(size=512, fill=RED):
     body = mark_group(size, 1.0, fill)
     x, y, w, h = mark_bbox(size)
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{x:.3f} {y:.3f} {w:.3f} {h:.3f}" '
@@ -52,7 +52,7 @@ def symbol_svg(size=512, fill=ORANGE):
 def mark_bbox(size):
     probe = f'{HERE}/.tmp/probe.svg'
     png = f'{HERE}/.tmp/probe.png'
-    open(probe, 'w').write(svg(size, mark_group(size, 1.0, ORANGE)))
+    open(probe, 'w').write(svg(size, mark_group(size, 1.0, RED)))
     subprocess.run(['rsvg-convert', '-w', '1024', '-h', '1024', probe, '-o', png], check=True)
     out = subprocess.run(['magick', png, '-trim', '-format', '%w %h %X %Y', 'info:'],
                          check=True, capture_output=True, text=True).stdout.split()
@@ -122,7 +122,7 @@ def main():
          f'{ICONS}/favicon-48x48.png', f'{ROOT}/favicon.ico'], check=True)
     print('favicon.ico')
 
-    subprocess.run(['magick', f'{ROOT}/apple-touch-icon.png', '-background', ORANGE,
+    subprocess.run(['magick', f'{ROOT}/apple-touch-icon.png', '-background', RED,
                     '-alpha', 'remove', '-alpha', 'off',
                     f'{ROOT}/apple-touch-icon.png'], check=True)
 
