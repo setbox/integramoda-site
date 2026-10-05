@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Integra Moda - PLM · ERP</title>
-  <meta name="description" content="Conecte a Coleção Moda ao seu ERP com sincronismo bilateral em tempo real. Elimine digitação manual e acelere o ciclo de desenvolvimento de coleções.">
+  <meta name="description" content="Integração entre a Coleção Moda e o seu ERP, desenvolvida para as regras da sua empresa e acompanhada depois de pronta: histórico, reprocessamento e suporte.">
   <!-- Open Graph / WhatsApp / LinkedIn -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://integramoda.com.br/">
   <meta property="og:site_name" content="Integra Moda">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Integra Moda - Do PLM ao ERP, sem uma linha de código.">
-  <meta property="og:description" content="Conecte a Coleção Moda ao seu ERP com sincronismo bilateral em tempo real. Elimine digitação manual e acelere o ciclo de desenvolvimento de coleções.">
+  <meta property="og:title" content="Integra Moda - Cada marca integra de um jeito. A sua também.">
+  <meta property="og:description" content="Integração entre a Coleção Moda e o seu ERP, desenvolvida para as regras da sua empresa e acompanhada depois de pronta: histórico, reprocessamento e suporte.">
   <meta property="og:image" content="https://integramoda.com.br/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Integra Moda - Do PLM ao ERP, sem uma linha de código.">
-  <meta name="twitter:description" content="Conecte a Coleção Moda ao seu ERP com sincronismo bilateral em tempo real.">
+  <meta name="twitter:title" content="Integra Moda - Cada marca integra de um jeito. A sua também.">
+  <meta name="twitter:description" content="Integração entre a Coleção Moda e o seu ERP, desenvolvida para as regras da sua empresa.">
   <meta name="twitter:image" content="https://integramoda.com.br/og-image.png">
   <link rel="icon" type="image/svg+xml" href="/assets/icon.svg">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -26,21 +26,21 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/favicon-48x48.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#FF5C01">
+  <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#FB0D1C">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#FF5C01">
+  <meta name="msapplication-TileColor" content="#FB0D1C">
   <meta name="msapplication-config" content="/browserconfig.xml">
-  <meta name="theme-color" content="#F97316">
+  <meta name="theme-color" content="#FB0D1C">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
           }
         }
       }
@@ -50,36 +50,60 @@
     body { background-color: #FAFAFA; color: #111111; }
     .logo-partner { filter: grayscale(1) opacity(0.4); transition: filter 0.2s, opacity 0.2s; }
     .logo-partner:hover { filter: grayscale(0) opacity(1); }
+    #site-nav { --nav-p: 0; --nav-t: 0; --nav-fg: #FFFFFF; color: var(--nav-fg); border-bottom: 1px solid rgba(229, 229, 229, var(--nav-p)); }
+    #site-nav .nav-layer-glass { background-color: rgba(17, 17, 17, 0.35); opacity: calc(1 - var(--nav-p)); }
+    #site-nav .nav-layer-solid { background-color: #FAFAFA; opacity: var(--nav-p); }
+    #site-nav .nav-logo-light { opacity: calc(1 - var(--nav-t)); }
+    #site-nav .nav-logo-dark { opacity: var(--nav-t); }
   </style>
 </head>
 <body class="font-sans antialiased">
 
   <!-- Announcement bar -->
-  <div class="bg-[#FFF7ED] border-b border-[#FED7AA]" hidden>
+  <div class="bg-[#FEE7E8] border-b border-[#FEC3C6]" hidden>
     <a href="#precos" class="block">
       <div class="max-w-5xl mx-auto px-4 md:px-8 h-9 flex items-center justify-center gap-2">
-        <span class="text-[11px] font-semibold bg-[#F97316] text-white px-2 py-0.5 rounded-full">Lançamento</span>
-        <span class="text-[12px] text-[#9A3412] hidden sm:inline">Aproveite o desconto promocional de lançamento da Integra Moda</span>
-        <span class="text-[12px] text-[#9A3412] sm:hidden">Desconto de lançamento</span>
-        <span class="text-[12px] text-[#F97316] font-medium">· Ver preços →</span>
+        <span class="text-[11px] font-semibold bg-[#AF0914] text-white px-2 py-0.5 rounded-full">Lançamento</span>
+        <span class="text-[12px] text-[#AF0914] hidden sm:inline">Aproveite o desconto promocional de lançamento da Integra Moda</span>
+        <span class="text-[12px] text-[#AF0914] sm:hidden">Desconto de lançamento</span>
+        <span class="text-[12px] text-[#AF0914] font-medium">· Ver preços →</span>
       </div>
     </a>
   </div>
 
   <!-- Nav -->
-  <nav class="sticky top-0 z-50 bg-[#FAFAFA] border-b border-[#E5E5E5]">
+  <nav id="site-nav" class="fixed top-0 inset-x-0 z-50 backdrop-blur-md">
+    <div class="nav-layer-glass absolute inset-0 -z-10" aria-hidden="true"></div>
+    <div class="nav-layer-solid absolute inset-0 -z-10" aria-hidden="true"></div>
     <div class="max-w-5xl mx-auto px-4 md:px-8 h-14 flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-2.5">
-        <img src="assets/logo-horizontal.svg" alt="Integra Moda" class="h-11 w-auto">
+      <a href="index.html" class="relative flex items-center gap-2.5">
+        <img src="assets/logo-horizontal-dark.svg" alt="Integra Moda" class="nav-logo-light h-11 w-auto">
+        <img src="assets/logo-horizontal.svg" alt="" aria-hidden="true" class="nav-logo-dark absolute left-0 top-0 h-11 w-auto">
       </a>
       <div class="flex items-center gap-3 md:gap-4 lg:gap-7">
-        <a href="#como-funciona" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Como funciona</a>
-        <a href="integracoes.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Integrações</a>
-        <a href="#erps" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">ERPs</a>
-        <a href="#precos" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Preços</a>
-        <a href="faq.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">FAQ</a>
-        <a href="https://app.integramoda.com.br" class="text-sm text-[#888888] hover:text-[#111111] transition-colors font-medium whitespace-nowrap">Entrar</a>
-        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#F97316] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#EA580C] transition-colors font-medium whitespace-nowrap">Falar com a equipe</a>
+        <a href="#como-funciona" class="hidden md:block text-sm hover:opacity-50 transition-opacity">Como funciona</a>
+        <a href="integracoes.html" class="hidden md:block text-sm hover:opacity-50 transition-opacity">Integrações</a>
+        <a href="#precos" class="hidden md:block text-sm hover:opacity-50 transition-opacity">Preços</a>
+        <a href="faq.html" class="hidden md:block text-sm hover:opacity-50 transition-opacity">FAQ</a>
+        <a href="https://app.integramoda.com.br" class="hidden md:block text-sm opacity-60 hover:opacity-100 transition-opacity font-medium whitespace-nowrap">Entrar</a>
+        <button id="nav-toggle" class="md:hidden p-1" aria-label="Abrir menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="3" width="20" height="2" rx="1" fill="currentColor"/>
+            <rect y="9" width="20" height="2" rx="1" fill="currentColor"/>
+            <rect y="15" width="20" height="2" rx="1" fill="currentColor"/>
+          </svg>
+        </button>
+        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#AF0914] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#8C0710] transition-colors font-medium whitespace-nowrap">Falar com a equipe</a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="nav-menu" class="hidden md:hidden border-t border-[#E5E5E5] bg-[#FAFAFA]">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col">
+        <a href="#como-funciona" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Como funciona</a>
+        <a href="integracoes.html" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Integrações</a>
+        <a href="#precos" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Preços</a>
+        <a href="faq.html" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">FAQ</a>
+        <a href="https://app.integramoda.com.br" class="text-sm text-[#111111] py-2.5 hover:opacity-50 transition-opacity">Entrar na plataforma</a>
       </div>
     </div>
   </nav>
@@ -87,39 +111,43 @@
   <main>
 
     <!-- HERO -->
-    <section class="bg-[#F7F7F7] border-b border-[#E8E8E8]">
-      <div class="max-w-4xl mx-auto px-4 md:px-8 pt-12 md:pt-20 pb-10 md:pb-16 text-center">
-        <h1 class="text-[38px] sm:text-[48px] md:text-[58px] font-extrabold leading-[1.08] tracking-[-0.03em] text-[#111111] mb-6">
-          Do PLM ao ERP,<br>sem uma linha de código.
-        </h1>
-        <p class="text-[15px] md:text-[17px] leading-[1.7] text-[#555555] max-w-2xl mx-auto mb-10">
-          A Integra Moda conecta a Coleção Moda ao seu ERP com sincronismo bilateral em tempo real, eliminando digitação manual, reduzindo erros e acelerando o ciclo de desenvolvimento de coleções.
-        </p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="mailto:contato@setbox.com.br" class="w-full sm:w-auto text-[14px] bg-[#F97316] text-white px-6 py-3 rounded-[6px] hover:bg-[#EA580C] transition-colors font-semibold">
-            Agendar uma conversa →
-          </a>
-          <a href="#como-funciona" class="text-[14px] text-[#888888] hover:text-[#111111] transition-colors font-medium">
-            Ver como funciona
-          </a>
-        </div>
-      </div>
-
-      <!-- App screenshot hero -->
-      <div class="max-w-5xl mx-auto px-4 md:px-8 pb-0">
-        <div class="rounded-t-xl overflow-hidden border border-b-0 border-[#E0E0E0] shadow-lg">
-          <!-- Browser chrome -->
-          <div class="bg-[#F2F2F2] border-b border-[#E0E0E0] px-4 py-2.5 flex items-center gap-3">
-            <div class="flex items-center gap-1.5 flex-shrink-0">
-              <span class="w-3 h-3 rounded-full bg-[#FF5F57]"></span>
-              <span class="w-3 h-3 rounded-full bg-[#FEBC2E]"></span>
-              <span class="w-3 h-3 rounded-full bg-[#28C840]"></span>
-            </div>
-            <div class="flex-1 px-3 py-1 text-[11px] text-[#AAAAAA] text-center truncate">
-              app.integramoda.com.br
-            </div>
+    <section class="bg-[#111111] pt-14 overflow-hidden lg:min-h-[100svh] lg:flex lg:flex-col">
+      <div class="w-full lg:flex-1 max-w-5xl mx-auto px-4 md:px-8 pt-12 md:pt-20 pb-14 md:pb-24 lg:pb-0 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="lg:pb-24">
+          <p class="text-[11px] text-white/75 font-semibold tracking-wide uppercase mb-4">Integração PLM · ERP</p>
+          <h1 class="text-[38px] sm:text-[44px] md:text-[50px] font-extrabold leading-[1.08] tracking-[-0.03em] text-white mb-6">
+            Cada marca integra de um jeito.<br>A sua também.
+          </h1>
+          <p class="text-[15px] md:text-[17px] leading-[1.7] text-[#A8A8A8] mb-10">
+            Integrar a Coleção Moda ao seu ERP é o começo: cada integração é definida com a sua equipe e desenvolvida para as regras da sua empresa. Manter funcionando é o nosso trabalho, com histórico, reprocessamento e suporte.
+          </p>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+            <a href="mailto:contato@setbox.com.br" class="w-full sm:w-auto text-center text-[14px] bg-[#E10C19] text-white px-6 py-3 rounded-[6px] hover:bg-[#AF0914] transition-colors font-semibold">
+              Agendar uma conversa →
+            </a>
+            <a href="#como-funciona" class="text-center sm:text-left text-[14px] text-white/80 hover:text-white transition-colors font-medium">
+              Ver como funciona
+            </a>
           </div>
-          <img src="assets/screenshots/dashboard.png" alt="Integra Moda" class="w-full block">
+          <a href="https://setbox.com.br" target="_blank" rel="noopener" class="mt-10 md:mt-12 inline-flex items-center gap-2.5 text-[12px] text-white/60 hover:text-white transition-colors">Um produto <img src="assets/setbox-lockup-escuro.svg" alt="Setbox" class="h-5 w-auto" width="1284" height="380"></a>
+        </div>
+
+        <!-- App screenshot hero -->
+        <div class="lg:[perspective:1800px] lg:-mb-48">
+          <div class="rounded-xl overflow-hidden border border-[#2E2E2E] bg-white lg:w-[230%] lg:origin-left lg:[transform:rotateY(-16deg)_rotateX(6deg)_rotateZ(-2deg)]">
+            <!-- Browser chrome -->
+            <div class="bg-[#F2F2F2] border-b border-[#E5E5E5] px-4 py-2.5 flex items-center gap-3">
+              <div class="flex items-center gap-1.5 flex-shrink-0">
+                <span class="w-3 h-3 rounded-full bg-[#CCCCCC]"></span>
+                <span class="w-3 h-3 rounded-full bg-[#CCCCCC]"></span>
+                <span class="w-3 h-3 rounded-full bg-[#CCCCCC]"></span>
+              </div>
+              <div class="flex-1 px-3 py-1 text-[11px] text-[#888888] text-center truncate">
+                app.integramoda.com.br
+              </div>
+            </div>
+            <img src="assets/screenshots/dashboard.png" alt="Painel da Integra Moda" class="w-full block">
+          </div>
         </div>
       </div>
     </section>
@@ -129,7 +157,7 @@
       <div class="max-w-5xl mx-auto px-4 md:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
-            <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3">Visibilidade</p>
+            <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-3">Visibilidade</p>
             <h2 class="text-[26px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-5">
               Acompanhe cada sincronização sem precisar abrir ticket.
             </h2>
@@ -138,20 +166,20 @@
             </p>
             <ul class="space-y-3">
               <li class="flex gap-3 text-[14px] text-[#444444]">
-                <span class="text-[#F97316] flex-shrink-0 font-bold">→</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold">→</span>
                 <span>Status de cada integração atualizado em tempo real</span>
               </li>
               <li class="flex gap-3 text-[14px] text-[#444444]">
-                <span class="text-[#F97316] flex-shrink-0 font-bold">→</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold">→</span>
                 <span>Saiba exatamente quando cada dado foi enviado ao ERP e se chegou com sucesso</span>
               </li>
               <li class="flex gap-3 text-[14px] text-[#444444]">
-                <span class="text-[#F97316] flex-shrink-0 font-bold">→</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold">→</span>
                 <span>Gerencie múltiplas marcas e integrações em um único painel</span>
               </li>
             </ul>
           </div>
-          <div class="rounded-xl overflow-hidden border border-[#E5E5E5] shadow-sm">
+          <div class="rounded-xl overflow-hidden border border-[#E5E5E5]">
             <img src="assets/screenshots/dashboard.png" alt="Integra Moda" class="w-full block">
           </div>
         </div>
@@ -162,11 +190,11 @@
     <section class="py-16 md:py-24 border-b border-[#E5E5E5]">
       <div class="max-w-5xl mx-auto px-4 md:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-          <div class="rounded-xl overflow-hidden border border-[#E5E5E5] shadow-sm order-2 md:order-1">
+          <div class="rounded-xl overflow-hidden border border-[#E5E5E5] order-2 md:order-1">
             <img src="assets/screenshots/details.png" alt="Histórico de execuções" class="w-full block">
           </div>
           <div class="order-1 md:order-2">
-            <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3">Operacional</p>
+            <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-3">Operacional</p>
             <h2 class="text-[26px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-5">
               Cada execução registrada. Falhas visíveis na hora.
             </h2>
@@ -177,8 +205,8 @@
               <table class="w-full text-[13px]">
                 <thead>
                   <tr class="border-b border-[#E5E5E5]">
-                    <th class="text-left text-[#999999] font-medium pb-2 pr-4 whitespace-nowrap">Campo</th>
-                    <th class="text-left text-[#999999] font-medium pb-2">Detalhe</th>
+                    <th class="text-left text-[#888888] font-medium pb-2 pr-4 whitespace-nowrap">Campo</th>
+                    <th class="text-left text-[#888888] font-medium pb-2">Detalhe</th>
                   </tr>
                 </thead>
                 <tbody class="text-[#444444]">
@@ -201,8 +229,8 @@
                   <tr>
                     <td class="py-2.5 pr-4 font-medium whitespace-nowrap">Status</td>
                     <td class="py-2.5">
-                      <span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Sucesso</span>
-                      <span class="text-[11px] font-semibold text-red-700 bg-red-100 px-2 py-0.5 rounded-full ml-1">Falha</span>
+                      <span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Sucesso</span>
+                      <span class="text-[11px] font-semibold text-[#AF0914] bg-[#FEE7E8] px-2 py-0.5 rounded-full ml-1">Falha</span>
                     </td>
                   </tr>
                 </tbody>
@@ -218,7 +246,7 @@
       <div class="max-w-5xl mx-auto px-4 md:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
           <div>
-            <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3">Auditoria</p>
+            <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-3">Auditoria</p>
             <h2 class="text-[26px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-5">
               90 dias de histórico. Cada byte registrado.
             </h2>
@@ -227,11 +255,11 @@
             </p>
             <ul class="space-y-3 mb-6">
               <li class="flex gap-3 text-[14px] text-[#444444]">
-                <span class="text-[#F97316] flex-shrink-0 font-bold">→</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold">→</span>
                 <span>Notificações por e-mail automáticas em caso de falha, destinatários e frequência configuráveis</span>
               </li>
               <li class="flex gap-3 text-[14px] text-[#444444]">
-                <span class="text-[#F97316] flex-shrink-0 font-bold">→</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold">→</span>
                 <span>Payload completo retido por 90 dias para reprocessamento manual</span>
               </li>
             </ul>
@@ -239,8 +267,8 @@
               <table class="w-full text-[13px]">
                 <thead>
                   <tr class="border-b border-[#E5E5E5]">
-                    <th class="text-left text-[#999999] font-medium pb-2 pr-4 whitespace-nowrap">Campo</th>
-                    <th class="text-left text-[#999999] font-medium pb-2">Detalhe</th>
+                    <th class="text-left text-[#888888] font-medium pb-2 pr-4 whitespace-nowrap">Campo</th>
+                    <th class="text-left text-[#888888] font-medium pb-2">Detalhe</th>
                   </tr>
                 </thead>
                 <tbody class="text-[#444444]">
@@ -260,7 +288,7 @@
               </table>
             </div>
           </div>
-          <div class="rounded-xl overflow-hidden border border-[#E5E5E5] shadow-sm">
+          <div class="rounded-xl overflow-hidden border border-[#E5E5E5]">
             <img src="assets/screenshots/execucao.png" alt="Auditoria e histórico" class="w-full block">
           </div>
         </div>
@@ -270,7 +298,7 @@
     <!-- COMO FUNCIONA -->
     <section id="como-funciona" class="py-16 md:py-24 bg-[#F7F7F7] border-b border-[#E5E5E5]">
       <div class="max-w-5xl mx-auto px-4 md:px-8">
-        <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3 text-center">Como funciona</p>
+        <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-3 text-center">Como funciona</p>
         <h2 class="text-[30px] md:text-[38px] font-bold leading-[1.15] tracking-tight text-[#111111] mb-4 text-center">
           Nunca mais comece do zero.
         </h2>
@@ -278,35 +306,35 @@
           A Coleção Moda sincroniza. A Integra Moda processa. O ERP atualiza. Em ambas as direções.
         </p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8 md:gap-10">
-          <div>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-6 md:p-7 hover:border-[#FB0D1C] transition-colors">
             <div class="flex items-center gap-2 mb-4">
               <img src="assets/logo-colecaomoda.png" alt="Coleção Moda" class="w-7 h-7 rounded-md object-cover border border-[#E5E5E5]">
-              <span class="text-[28px] font-bold text-[#C8C8C8]">01</span>
+              <span class="text-[13px] font-bold text-[#AF0914] tracking-wide">01</span>
             </div>
             <h3 class="text-[15px] font-semibold text-[#111111] mb-2">PLM envia o evento</h3>
             <p class="text-[13px] leading-[1.75] text-[#666666]">
               Protótipos, produtos, materiais e coleções criados ou atualizados na Coleção Moda são capturados automaticamente pelo Integra Moda - sem exportação de arquivo, sem digitação, sem intervenção da sua equipe.
             </p>
           </div>
-          <div>
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-6 md:p-7 hover:border-[#FB0D1C] transition-colors">
             <div class="flex items-center gap-2 mb-4">
               <img src="assets/icon.svg" alt="Integra Moda" class="w-7 h-7 rounded-md object-cover border border-[#E5E5E5]">
-              <span class="text-[28px] font-bold text-[#C8C8C8]">02</span>
+              <span class="text-[13px] font-bold text-[#AF0914] tracking-wide">02</span>
             </div>
             <h3 class="text-[15px] font-semibold text-[#111111] mb-2">Motor de mapeamento processa</h3>
             <p class="text-[13px] leading-[1.75] text-[#666666]">
               O motor de mapeamento converte os campos da Coleção Moda para o formato do ERP conforme as regras de negócio configuradas. Formatos, obrigatoriedades e validações são aplicados automaticamente.
             </p>
           </div>
-          <div>
+          <div class="bg-white border border-[#E5E5E5] rounded-xl p-6 md:p-7 hover:border-[#FB0D1C] transition-colors">
             <div class="flex items-center gap-2 mb-4">
               <div class="w-7 h-7 rounded-md border border-[#E5E5E5] flex items-center justify-center">
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
-                  <path d="M3 8h10M9 4l4 4-4 4" stroke="#F97316" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3 8h10M9 4l4 4-4 4" stroke="#AF0914" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </div>
-              <span class="text-[28px] font-bold text-[#C8C8C8]">03</span>
+              <span class="text-[13px] font-bold text-[#AF0914] tracking-wide">03</span>
             </div>
             <h3 class="text-[15px] font-semibold text-[#111111] mb-2">ERP atualizado em tempo real</h3>
             <p class="text-[13px] leading-[1.75] text-[#666666]">
@@ -324,8 +352,8 @@
             <table class="w-full text-[13px]">
               <thead class="bg-[#FAFAFA]">
                 <tr class="border-b border-[#F0F0F0]">
-                  <th class="text-left text-[#999999] font-medium px-6 py-3 whitespace-nowrap">Etapa</th>
-                  <th class="text-left text-[#999999] font-medium px-4 py-3">Descrição</th>
+                  <th class="text-left text-[#888888] font-medium px-6 py-3 whitespace-nowrap">Etapa</th>
+                  <th class="text-left text-[#888888] font-medium px-4 py-3">Descrição</th>
                 </tr>
               </thead>
               <tbody>
@@ -351,7 +379,7 @@
     <!-- ERPs SUPORTADOS -->
     <section id="erps" class="py-16 md:py-24 border-b border-[#E5E5E5]">
       <div class="max-w-5xl mx-auto px-4 md:px-8">
-        <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3 text-center">ERPs suportados</p>
+        <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-3 text-center">ERPs suportados</p>
         <h2 class="text-[28px] md:text-[38px] font-bold leading-[1.15] tracking-tight text-[#111111] mb-4 text-center">
           Compatível com os principais ERPs<br>do setor têxtil.
         </h2>
@@ -378,78 +406,78 @@
             <table class="w-full text-[13px]">
               <thead class="bg-[#FAFAFA]">
                 <tr class="border-b border-[#F0F0F0]">
-                  <th class="text-left text-[#999999] font-medium px-6 py-3">ERP</th>
-                  <th class="text-left text-[#999999] font-medium px-4 py-3">Segmento</th>
-                  <th class="text-left text-[#999999] font-medium px-4 py-3">Status</th>
+                  <th class="text-left text-[#888888] font-medium px-6 py-3">ERP</th>
+                  <th class="text-left text-[#888888] font-medium px-4 py-3">Segmento</th>
+                  <th class="text-left text-[#888888] font-medium px-4 py-3">Status</th>
                 </tr>
               </thead>
               <tbody>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">TOTVS Moda</td>
                   <td class="px-4 py-3.5 text-[#666666]">Têxtil / Moda</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Sisplan</td>
                   <td class="px-4 py-3.5 text-[#666666]">Têxtil / Confecção</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Linx</td>
                   <td class="px-4 py-3.5 text-[#666666]">Varejo / Moda</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Senior Sistemas</td>
                   <td class="px-4 py-3.5 text-[#666666]">Gestão Empresarial</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Adsomos</td>
                   <td class="px-4 py-3.5 text-[#666666]">Gestão Empresarial</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Consistem</td>
                   <td class="px-4 py-3.5 text-[#666666]">Gestão Empresarial</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Excia</td>
                   <td class="px-4 py-3.5 text-[#666666]">Têxtil / Indústria</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Systextil</td>
                   <td class="px-4 py-3.5 text-[#666666]">Têxtil / Confecção</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Virtual Age</td>
                   <td class="px-4 py-3.5 text-[#666666]">Têxtil / Moda</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Vexta</td>
                   <td class="px-4 py-3.5 text-[#666666]">Têxtil / Confecção</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr class="border-b border-[#F5F5F5]">
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Organiza Têxtil</td>
                   <td class="px-4 py-3.5 text-[#666666]">Têxtil / Confecção</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
                 <tr>
                   <td class="px-6 py-3.5 font-medium text-[#111111]">Produtec</td>
                   <td class="px-4 py-3.5 text-[#666666]">Têxtil / Confecção</td>
-                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-green-700 bg-green-100 px-2 py-0.5 rounded-full">Disponível</span></td>
+                  <td class="px-4 py-3.5"><span class="text-[11px] font-semibold text-[#16794A] bg-[#E3F4EA] px-2 py-0.5 rounded-full">Disponível</span></td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="px-6 py-4 border-t border-[#F0F0F0] bg-[#FAFAFA]">
             <p class="text-[12px] leading-[1.7] text-[#666666]">
-              <span class="font-semibold text-[#111111]">Conector disponível quer dizer que a comunicação com aquele ERP já está resolvida.</span> A integração em si continua sendo desenvolvida para a sua empresa: quais campos, em qual formato, com quais regras. Dois clientes com o mesmo ERP têm integrações diferentes. <a href="faq.html#parametrizar" class="text-[#F97316] font-medium">Entenda o que já está pronto e o que não está</a>
+              <span class="font-semibold text-[#111111]">Conector disponível quer dizer que a comunicação com aquele ERP já está resolvida.</span> A integração em si continua sendo desenvolvida para a sua empresa: quais campos, em qual formato, com quais regras. Dois clientes com o mesmo ERP têm integrações diferentes. <a href="faq.html#parametrizar" class="text-[#AF0914] font-medium">Entenda o que já está pronto e o que não está</a>
             </p>
           </div>
         </div>
@@ -461,7 +489,7 @@
       <div class="max-w-5xl mx-auto px-4 md:px-8">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 md:gap-16 items-start">
           <div>
-            <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3">Tudo incluído</p>
+            <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-3">Tudo incluído</p>
             <h2 class="text-[26px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-5">
               Nunca mais procure por um evento que sumiu.
             </h2>
@@ -470,49 +498,49 @@
             </p>
             <ul class="space-y-4">
               <li class="flex gap-3 items-start">
-                <span class="text-[#F97316] flex-shrink-0 font-bold mt-0.5">✓</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold mt-0.5">✓</span>
                 <div>
                   <p class="text-[14px] font-medium text-[#111111]">Zero retrabalho</p>
                   <p class="text-[13px] text-[#888888]">Dados fluem automaticamente - sem digitação manual, sem importação de arquivos</p>
                 </div>
               </li>
               <li class="flex gap-3 items-start">
-                <span class="text-[#F97316] flex-shrink-0 font-bold mt-0.5">✓</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold mt-0.5">✓</span>
                 <div>
                   <p class="text-[14px] font-medium text-[#111111]">Sincronismo bilateral</p>
                   <p class="text-[13px] text-[#888888]">Fluxo em duas vias - do PLM para o ERP e do ERP para o PLM</p>
                 </div>
               </li>
               <li class="flex gap-3 items-start">
-                <span class="text-[#F97316] flex-shrink-0 font-bold mt-0.5">✓</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold mt-0.5">✓</span>
                 <div>
                   <p class="text-[14px] font-medium text-[#111111]">Tarefas agendadas</p>
                   <p class="text-[13px] text-[#888888]">Configure sincronismos periódicos de imagens, precificação, grade e outros dados</p>
                 </div>
               </li>
               <li class="flex gap-3 items-start">
-                <span class="text-[#F97316] flex-shrink-0 font-bold mt-0.5">✓</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold mt-0.5">✓</span>
                 <div>
                   <p class="text-[14px] font-medium text-[#111111]">Mapeamento de campos configurável</p>
                   <p class="text-[13px] text-[#888888]">Mapeamento de campos específico para sua operação</p>
                 </div>
               </li>
               <li class="flex gap-3 items-start">
-                <span class="text-[#F97316] flex-shrink-0 font-bold mt-0.5">✓</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold mt-0.5">✓</span>
                 <div>
                   <p class="text-[14px] font-medium text-[#111111]">Sem limite de marcas</p>
                   <p class="text-[13px] text-[#888888]">Todas as marcas da sua empresa em um único painel, sem custo por marca</p>
                 </div>
               </li>
               <li class="flex gap-3 items-start">
-                <span class="text-[#F97316] flex-shrink-0 font-bold mt-0.5">✓</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold mt-0.5">✓</span>
                 <div>
                   <p class="text-[14px] font-medium text-[#111111]">Disponibilidade 24/7</p>
                   <p class="text-[13px] text-[#888888]">Infraestrutura gerenciada pela equipe da Integra Moda</p>
                 </div>
               </li>
               <li class="flex gap-3 items-start">
-                <span class="text-[#F97316] flex-shrink-0 font-bold mt-0.5">✓</span>
+                <span class="text-[#AF0914] flex-shrink-0 font-bold mt-0.5">✓</span>
                 <div>
                   <p class="text-[14px] font-medium text-[#111111]">Continuidade</p>
                   <p class="text-[13px] text-[#888888]">A integração não depende de quem a construiu. Monitoramento, logs, reprocessamento e suporte seguem, independente de quem está na sua empresa ou na nossa</p>
@@ -524,47 +552,47 @@
           <!-- Pricing card -->
           <div id="precos">
             <div class="border border-[#E5E5E5] rounded-xl p-6 md:p-8 bg-white">
-              <p class="text-[12px] text-[#999999] font-medium uppercase tracking-wide mb-4">Plano mensal</p>
+              <p class="text-[12px] text-[#888888] font-medium uppercase tracking-wide mb-4">Plano mensal</p>
               <div class="flex items-baseline gap-1.5 mb-1">
                 <span class="text-[42px] font-bold text-[#111111] tracking-tight">R$ 299,90</span>
-                <span class="text-[15px] text-[#AAAAAA]">/mês</span>
+                <span class="text-[15px] text-[#888888]">/mês</span>
               </div>
-              <p class="text-[12px] text-[#BBBBBB] mb-8">Impostos inclusos · cobrado mensalmente</p>
+              <p class="text-[12px] text-[#888888] mb-8">Impostos inclusos · cobrado mensalmente</p>
 
               <ul class="space-y-2.5 mb-8">
-                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#F97316]">✓</span>Plataforma 24h/dia, 7 dias/semana</li>
-                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#F97316]">✓</span>Sincronismo bilateral PLM ↔ ERP</li>
-                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#F97316]">✓</span>Mapeamento de campos configurável</li>
-                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#F97316]">✓</span>Histórico de 90 dias</li>
-                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#F97316]">✓</span>Logs de sucesso e falha em tempo real</li>
-                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#F97316]">✓</span>Alertas por e-mail em caso de falha (configurável)</li>
-                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#F97316]">✓</span>Até 3 usuários para monitoramento</li>
+                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#AF0914]">✓</span>Plataforma 24h/dia, 7 dias/semana</li>
+                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#AF0914]">✓</span>Sincronismo bilateral PLM ↔ ERP</li>
+                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#AF0914]">✓</span>Mapeamento de campos configurável</li>
+                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#AF0914]">✓</span>Histórico de 90 dias</li>
+                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#AF0914]">✓</span>Logs de sucesso e falha em tempo real</li>
+                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#AF0914]">✓</span>Alertas por e-mail em caso de falha (configurável)</li>
+                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#AF0914]">✓</span>Até 3 usuários para monitoramento</li>
                 <li class="flex gap-2.5 text-[13px] text-[#444444]">
-                  <span class="text-[#F97316]">✓</span>
+                  <span class="text-[#AF0914]">✓</span>
                   <span>2.000 requisições/mês inclusas
-                    <span class="block text-[11px] leading-[1.6] text-[#999999] mt-1">Acima do limite: R$ 0,05 por requisição adicional, cobrada no mês seguinte. Reprocessamento não conta. <a href="faq.html#requisicoes" class="text-[#F97316]">O que é uma requisição</a></span>
+                    <span class="block text-[11px] leading-[1.6] text-[#888888] mt-1">Acima do limite: R$ 0,05 por requisição adicional, cobrada no mês seguinte. Reprocessamento não conta. <a href="faq.html#requisicoes" class="text-[#AF0914]">O que é uma requisição</a></span>
                   </span>
                 </li>
                 <li class="flex gap-2.5 text-[13px] text-[#444444]">
-                  <span class="text-[#F97316]">✓</span>
+                  <span class="text-[#AF0914]">✓</span>
                   <span>Sem limite de marcas
-                    <span class="block text-[11px] leading-[1.6] text-[#999999] mt-1">Valores por empresa. Cada CNPJ tem contrato, setup e mensalidade próprios</span>
+                    <span class="block text-[11px] leading-[1.6] text-[#888888] mt-1">Valores por empresa. Cada CNPJ tem contrato, setup e mensalidade próprios</span>
                   </span>
                 </li>
-                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#F97316]">✓</span>Suporte via e-mail e telefone (seg a sex)</li>
-                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#F97316]">✓</span>Treinamento virtual de 1h incluso</li>
+                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#AF0914]">✓</span>Suporte via e-mail e telefone (seg a sex)</li>
+                <li class="flex gap-2.5 text-[13px] text-[#444444]"><span class="text-[#AF0914]">✓</span>Treinamento virtual de 1h incluso</li>
               </ul>
 
               <div class="border-t border-[#F5F5F5] pt-5 mb-5">
-                <p class="text-[12px] text-[#AAAAAA]">
+                <p class="text-[12px] text-[#888888]">
                   + R$ 25/mês por usuário adicional<br>
                   Setup cobrado separadamente, conforme o seu ERP e as integrações escolhidas
                   <span hidden><br><br>
-                  <span class="block text-center mt-1 bg-[#FFF7ED] border border-[#FED7AA] text-[#9A3412] rounded-md px-2.5 py-1.5 leading-snug">Setup com <strong>15% de desconto</strong> para contratos assinados em até 7 dias após o envio da proposta.</span></span>
+                  <span class="block text-center mt-1 bg-[#FEE7E8] border border-[#FEC3C6] text-[#AF0914] rounded-md px-2.5 py-1.5 leading-snug">Setup com <strong>15% de desconto</strong> para contratos assinados em até 7 dias após o envio da proposta.</span></span>
                 </p>
               </div>
 
-              <a href="mailto:contato@setbox.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20proposta%20-%20Integra%20Moda" class="block w-full bg-[#F97316] text-white text-[14px] font-semibold text-center py-3 rounded-[6px] hover:bg-[#EA580C] transition-colors">
+              <a href="mailto:contato@setbox.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20proposta%20-%20Integra%20Moda" class="block w-full bg-[#AF0914] text-white text-[14px] font-semibold text-center py-3 rounded-[6px] hover:bg-[#8C0710] transition-colors">
                 Solicitar proposta →
               </a>
             </div>
@@ -583,12 +611,12 @@
           Se sua equipe ainda transfere dados do PLM para o ERP por digitação ou exportação e importação de arquivos, cada coleção tem um custo invisível. Fale com a nossa equipe.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <a href="mailto:contato@setbox.com.br" class="w-full sm:w-auto text-[14px] bg-[#F97316] text-white px-6 py-3 rounded-[6px] hover:bg-[#EA580C] transition-colors font-semibold">
+          <a href="mailto:contato@setbox.com.br" class="w-full sm:w-auto text-[14px] bg-[#AF0914] text-white px-6 py-3 rounded-[6px] hover:bg-[#8C0710] transition-colors font-semibold">
             Agendar uma conversa →
           </a>
         </div>
-        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-[13px] text-[#999999]">
-          <a href="mailto:contato@setbox.com.br" class="hover:text-[#F97316] transition-colors">contato@setbox.com.br</a>
+        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-[13px] text-[#888888]">
+          <a href="mailto:contato@setbox.com.br" class="hover:text-[#AF0914] transition-colors">contato@setbox.com.br</a>
           <span class="hidden sm:inline">·</span>
           <a href="https://wa.me/5541999073688" target="_blank" rel="noopener" class="hover:text-[#111111] transition-colors">(41) 99907-3688</a>
           <span class="hidden sm:inline">·</span>
@@ -600,47 +628,70 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-[#E5E5E5]">
-    <div class="max-w-5xl mx-auto px-4 md:px-8 py-10 md:py-14 flex flex-col md:flex-row gap-10 md:gap-16">
-      <div class="flex-shrink-0 md:min-w-[180px]">
-        <a href="https://setbox.com.br" target="_blank" rel="noopener"><img src="assets/logo-setbox.png" alt="Setbox" class="h-9 w-auto mb-4 opacity-50 hover:opacity-100 transition-opacity"></a>
-        <p class="text-[12px] text-[#BBBBBB]">© 2026 Setbox Serviços Digitais</p>
-        <p class="text-[12px] text-[#BBBBBB] mt-3 leading-relaxed">
-          Av. Carneiro Leão, 563 - Zona 01<br>
-          Maringá / PR - 87014-010
-        </p>
-        <p class="text-[12px] text-[#BBBBBB] mt-3">CNPJ 08.889.601/0001-09</p>
+  <footer class="bg-[#111111]">
+    <div class="max-w-5xl mx-auto px-4 md:px-8 py-10 md:py-14">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="col-span-2 md:col-span-1">
+          <a href="index.html"><img src="assets/logo-horizontal-dark.svg" alt="Integra Moda" class="h-11 w-auto"></a>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-white mb-4">Produto</p>
+          <ul class="space-y-2.5">
+            <li><a href="#como-funciona" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Como funciona</a></li>
+            <li><a href="integracoes.html" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Integrações</a></li>
+            <li><a href="#erps" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">ERPs suportados</a></li>
+            <li><a href="#precos" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Preços</a></li>
+            <li><a href="faq.html" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-white mb-4">Clientes</p>
+          <ul class="space-y-2.5">
+            <li><a href="https://app.integramoda.com.br" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Entrar na plataforma</a></li>
+            <li><a href="mailto:contato@setbox.com.br" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Suporte</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-white mb-4">Empresa</p>
+          <ul class="space-y-2.5">
+            <li><a href="https://setbox.com.br" target="_blank" rel="noopener" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Setbox</a></li>
+            <li><a href="mailto:contato@setbox.com.br" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Contato</a></li>
+            <li><a href="privacidade.html" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Política de privacidade</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="grid grid-cols-3 gap-6 md:gap-12 flex-1">
-        <div>
-          <p class="text-[12px] font-semibold text-[#111111] mb-4">Produto</p>
-          <ul class="space-y-2.5">
-            <li><a href="#como-funciona" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Como funciona</a></li>
-            <li><a href="integracoes.html" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Integrações</a></li>
-            <li><a href="#erps" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">ERPs suportados</a></li>
-            <li><a href="#precos" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Preços</a></li>
-            <li><a href="faq.html" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Perguntas frequentes</a></li>
-            <li><a href="#" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Documentação</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-[12px] font-semibold text-[#111111] mb-4">Empresa</p>
-          <ul class="space-y-2.5">
-            <li><a href="https://setbox.com.br" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Setbox</a></li>
-            <li><a href="mailto:contato@setbox.com.br" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Contato</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-[12px] font-semibold text-[#111111] mb-4">Legal</p>
-          <ul class="space-y-2.5">
-            <li><a href="#" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Privacidade</a></li>
-            <li><a href="#" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Termos de Uso</a></li>
-            <li><a href="#" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">LGPD</a></li>
-          </ul>
-        </div>
+      <div class="mt-10 pt-6 border-t border-[#2A2A2A] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <a href="https://setbox.com.br" target="_blank" rel="noopener" class="flex items-center gap-2.5 text-[12px] text-[#888888] hover:text-white transition-colors self-start md:self-auto">Um produto <img src="assets/setbox-lockup-escuro.svg" alt="Setbox" class="h-5 w-auto" width="1284" height="380"></a>
+        <p class="text-[12px] leading-[1.7] text-[#888888] md:text-right">© 2026 Setbox Serviços Digitais · SETBOX INFORMATICA LTDA · CNPJ 08.889.601/0001-09<br>Av. Carneiro Leão, 563 - Zona 01, Maringá / PR - 87014-010</p>
       </div>
     </div>
   </footer>
 
+  <script>
+    (function() {
+      var nav = document.getElementById('site-nav');
+      var menu = document.getElementById('nav-menu');
+      var hero = document.querySelector('main > section');
+      var range = 160;
+      function update() {
+        var end = hero.offsetHeight - nav.offsetHeight;
+        var p = Math.min(Math.max((window.scrollY - (end - range)) / range, 0), 1);
+        if (!menu.classList.contains('hidden')) p = 1;
+        var t = Math.min(Math.max((p - 0.4) / 0.2, 0), 1);
+        var c = Math.round(255 - (255 - 17) * t);
+        nav.style.setProperty('--nav-p', p.toFixed(3));
+        nav.style.setProperty('--nav-t', t.toFixed(3));
+        nav.style.setProperty('--nav-fg', 'rgb(' + c + ', ' + c + ', ' + c + ')');
+      }
+      document.getElementById('nav-toggle').addEventListener('click', function() {
+        menu.classList.toggle('hidden');
+        this.setAttribute('aria-expanded', String(!menu.classList.contains('hidden')));
+        update();
+      });
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update);
+      update();
+    })();
+  </script>
 </body>
 </html>

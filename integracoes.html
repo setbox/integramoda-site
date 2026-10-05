@@ -26,21 +26,21 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon/favicon-48x48.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#FF5C01">
+  <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#FB0D1C">
   <link rel="manifest" href="/site.webmanifest">
-  <meta name="msapplication-TileColor" content="#FF5C01">
+  <meta name="msapplication-TileColor" content="#FB0D1C">
   <meta name="msapplication-config" content="/browserconfig.xml">
-  <meta name="theme-color" content="#F97316">
+  <meta name="theme-color" content="#FB0D1C">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            sans: ['Manrope', 'system-ui', '-apple-system', 'sans-serif'],
           }
         }
       }
@@ -55,13 +55,13 @@
 <body class="font-sans antialiased">
 
   <!-- Announcement bar -->
-  <div class="bg-[#FFF7ED] border-b border-[#FED7AA]" hidden>
+  <div class="bg-[#FEE7E8] border-b border-[#FEC3C6]" hidden>
     <a href="index.html#precos" class="block">
       <div class="max-w-5xl mx-auto px-4 md:px-8 h-9 flex items-center justify-center gap-2">
-        <span class="text-[11px] font-semibold bg-[#F97316] text-white px-2 py-0.5 rounded-full">Lançamento</span>
-        <span class="text-[12px] text-[#9A3412] hidden sm:inline">Aproveite o desconto promocional de lançamento da Integra Moda</span>
-        <span class="text-[12px] text-[#9A3412] sm:hidden">Desconto de lançamento</span>
-        <span class="text-[12px] text-[#F97316] font-medium">· Ver preços →</span>
+        <span class="text-[11px] font-semibold bg-[#AF0914] text-white px-2 py-0.5 rounded-full">Lançamento</span>
+        <span class="text-[12px] text-[#AF0914] hidden sm:inline">Aproveite o desconto promocional de lançamento da Integra Moda</span>
+        <span class="text-[12px] text-[#AF0914] sm:hidden">Desconto de lançamento</span>
+        <span class="text-[12px] text-[#AF0914] font-medium">· Ver preços →</span>
       </div>
     </a>
   </div>
@@ -74,12 +74,28 @@
       </a>
       <div class="flex items-center gap-3 md:gap-4 lg:gap-7">
         <a href="index.html#como-funciona" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Como funciona</a>
-        <a href="integracoes.html" class="hidden md:block text-sm text-[#F97316] font-medium transition-opacity">Integrações</a>
-        <a href="index.html#erps" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">ERPs</a>
+        <a href="integracoes.html" class="hidden md:block text-sm text-[#AF0914] font-medium transition-opacity">Integrações</a>
         <a href="index.html#precos" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">Preços</a>
         <a href="faq.html" class="hidden md:block text-sm text-[#111111] hover:opacity-50 transition-opacity">FAQ</a>
-        <a href="https://app.integramoda.com.br" class="text-sm text-[#888888] hover:text-[#111111] transition-colors font-medium whitespace-nowrap">Entrar</a>
-        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#F97316] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#EA580C] transition-colors font-medium whitespace-nowrap">Falar com a equipe</a>
+        <a href="https://app.integramoda.com.br" class="hidden md:block text-sm text-[#888888] hover:text-[#111111] transition-colors font-medium whitespace-nowrap">Entrar</a>
+        <button id="nav-toggle" class="md:hidden p-1" aria-label="Abrir menu" aria-expanded="false">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="3" width="20" height="2" rx="1" fill="#111111"/>
+            <rect y="9" width="20" height="2" rx="1" fill="#111111"/>
+            <rect y="15" width="20" height="2" rx="1" fill="#111111"/>
+          </svg>
+        </button>
+        <a href="mailto:contato@setbox.com.br" class="text-sm bg-[#AF0914] text-white px-4 py-1.5 rounded-[6px] hover:bg-[#8C0710] transition-colors font-medium whitespace-nowrap">Falar com a equipe</a>
+      </div>
+    </div>
+    <!-- Mobile menu -->
+    <div id="nav-menu" class="hidden md:hidden border-t border-[#E5E5E5] bg-[#FAFAFA]">
+      <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col">
+        <a href="index.html#como-funciona" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Como funciona</a>
+        <a href="integracoes.html" class="text-sm text-[#AF0914] font-medium py-2.5 border-b border-[#F0F0F0]">Integrações</a>
+        <a href="index.html#precos" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">Preços</a>
+        <a href="faq.html" class="text-sm text-[#111111] py-2.5 border-b border-[#F0F0F0] hover:opacity-50 transition-opacity">FAQ</a>
+        <a href="https://app.integramoda.com.br" class="text-sm text-[#111111] py-2.5 hover:opacity-50 transition-opacity">Entrar na plataforma</a>
       </div>
     </div>
   </nav>
@@ -89,7 +105,7 @@
     <!-- HERO -->
     <section class="bg-[#F7F7F7] border-b border-[#E8E8E8]">
       <div class="max-w-3xl mx-auto px-4 md:px-8 pt-12 md:pt-20 pb-10 md:pb-14 text-center">
-        <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3">Possibilidades de integração</p>
+        <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-3">Possibilidades de integração</p>
         <h1 class="text-[32px] sm:text-[40px] md:text-[48px] font-extrabold leading-[1.1] tracking-[-0.03em] text-[#111111] mb-6">
           O que é possível integrar<br class="hidden sm:block"> entre o PLM e o seu ERP.
         </h1>
@@ -97,7 +113,7 @@
           Este é o catálogo das possibilidades de integração entre o PLM Coleção Moda e o ERP da sua empresa. Cada implantação é desenvolvida sob medida, e o conjunto que se aplica ao seu caso é definido no levantamento, antes de qualquer compromisso de escopo.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="mailto:contato@setbox.com.br" class="w-full sm:w-auto text-[14px] bg-[#F97316] text-white px-6 py-3 rounded-[6px] hover:bg-[#EA580C] transition-colors font-semibold">
+          <a href="mailto:contato@setbox.com.br" class="w-full sm:w-auto text-[14px] bg-[#AF0914] text-white px-6 py-3 rounded-[6px] hover:bg-[#8C0710] transition-colors font-semibold">
             Avaliar o meu cenário →
           </a>
           <a href="#avaliacao" class="text-[14px] text-[#888888] hover:text-[#111111] transition-colors font-medium">
@@ -111,12 +127,12 @@
     <section class="border-b border-[#E5E5E5] bg-[#FAFAFA] sticky top-14 z-40">
       <div class="max-w-5xl mx-auto px-4 md:px-8 py-4">
         <div class="flex flex-wrap gap-x-6 gap-y-2 justify-center">
-          <a href="#partida" class="text-[13px] text-[#888888] hover:text-[#F97316] transition-colors">Por onde começar</a>
-          <a href="#inbound" class="text-[13px] text-[#888888] hover:text-[#F97316] transition-colors">ERP → PLM <span class="text-[#CCCCCC]">16</span></a>
-          <a href="#outbound" class="text-[13px] text-[#888888] hover:text-[#F97316] transition-colors">PLM → ERP <span class="text-[#CCCCCC]">13</span></a>
-          <a href="#terceiros" class="text-[13px] text-[#888888] hover:text-[#F97316] transition-colors">Além do ERP <span class="text-[#CCCCCC]">3</span></a>
-          <a href="#automacoes" class="text-[13px] text-[#888888] hover:text-[#F97316] transition-colors">Automações <span class="text-[#CCCCCC]">5</span></a>
-          <a href="#momentos" class="text-[13px] text-[#888888] hover:text-[#F97316] transition-colors">Quando acontece</a>
+          <a href="#partida" class="text-[13px] text-[#888888] hover:text-[#AF0914] transition-colors">Por onde começar</a>
+          <a href="#inbound" class="text-[13px] text-[#888888] hover:text-[#AF0914] transition-colors">ERP → PLM <span class="text-[#CCCCCC]">16</span></a>
+          <a href="#outbound" class="text-[13px] text-[#888888] hover:text-[#AF0914] transition-colors">PLM → ERP <span class="text-[#CCCCCC]">13</span></a>
+          <a href="#terceiros" class="text-[13px] text-[#888888] hover:text-[#AF0914] transition-colors">Além do ERP <span class="text-[#CCCCCC]">3</span></a>
+          <a href="#automacoes" class="text-[13px] text-[#888888] hover:text-[#AF0914] transition-colors">Automações <span class="text-[#CCCCCC]">5</span></a>
+          <a href="#momentos" class="text-[13px] text-[#888888] hover:text-[#AF0914] transition-colors">Quando acontece</a>
         </div>
       </div>
     </section>
@@ -125,7 +141,7 @@
     <section class="py-12 md:py-16 border-b border-[#E5E5E5]">
       <div class="max-w-3xl mx-auto px-4 md:px-8">
         <div class="bg-white border border-[#E5E5E5] rounded-xl p-6 md:p-8">
-          <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-4">Antes de tudo, três coisas importantes</p>
+          <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-4">Antes de tudo, três coisas importantes</p>
           <div class="space-y-5">
             <div>
               <p class="text-[14px] font-semibold text-[#111111] mb-2">Esta página mostra o que a plataforma suporta, não o que está no seu contrato</p>
@@ -156,7 +172,7 @@
     <!-- PONTOS DE PARTIDA -->
     <section id="partida" class="py-14 md:py-20 border-b border-[#E5E5E5] bg-[#F7F7F7] scroll-mt-28">
       <div class="max-w-4xl mx-auto px-4 md:px-8">
-        <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3">Por onde começar</p>
+        <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-3">Por onde começar</p>
         <h2 class="text-[24px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-4">
           Ninguém contrata o catálogo inteiro.
         </h2>
@@ -167,7 +183,7 @@
         <div class="space-y-4">
           <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 md:p-6">
             <div class="flex items-baseline gap-3 mb-2">
-              <span class="text-[11px] font-semibold text-[#F97316] bg-[#FFF7ED] border border-[#FED7AA] px-2 py-0.5 rounded-full">Base</span>
+              <span class="text-[11px] font-semibold text-[#AF0914] bg-[#FEE7E8] border border-[#FEC3C6] px-2 py-0.5 rounded-full">Base</span>
               <p class="text-[15px] font-semibold text-[#111111]">Base de implantação</p>
             </div>
             <p class="text-[14px] leading-[1.75] text-[#555555]">Estruturação do ambiente, autenticação nos dois lados, recepção de eventos, mapeamento de campos base, tratamento de erros e homologação. Não é um fluxo de negócio, é o alicerce sobre o qual todos eles rodam. Está presente em qualquer projeto, e é feita uma vez só.</p>
@@ -178,7 +194,7 @@
               <p class="text-[15px] font-semibold text-[#111111]">Ficha técnica gera o produto no ERP</p>
             </div>
             <p class="text-[14px] leading-[1.75] text-[#555555]">O produto desenvolvido no PLM é cadastrado no ERP com grade, cores, códigos e valores padrão, sem ninguém redigitar. Costuma ser o primeiro bloco porque é onde está o maior volume de digitação manual.</p>
-            <p class="text-[12px] text-[#888888] mt-3">Itens do catálogo: <a href="#outbound" class="text-[#F97316]">produto, tabela de medidas, ficha técnica e estrutura, código e SKU, imagens, ciclo de vida</a></p>
+            <p class="text-[12px] text-[#888888] mt-3">Itens do catálogo: <a href="#outbound" class="text-[#AF0914]">produto, tabela de medidas, ficha técnica e estrutura, código e SKU, imagens, ciclo de vida</a></p>
           </div>
           <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 md:p-6">
             <div class="flex items-baseline gap-3 mb-2">
@@ -186,7 +202,7 @@
               <p class="text-[15px] font-semibold text-[#111111]">Insumos e consumo entre os dois sistemas</p>
             </div>
             <p class="text-[14px] leading-[1.75] text-[#555555]">Materiais e aviamentos sincronizados, e o consumo por produto alimentando o ERP para gerar ordens e necessidades de compra. Aqui a direção precisa ser definida caso a caso: há empresas em que o insumo nasce no ERP e desce para o PLM, e empresas em que a composição nasce no PLM e sobe para o ERP.</p>
-            <p class="text-[12px] text-[#888888] mt-3">Itens do catálogo: <a href="#inbound" class="text-[#F97316]">insumos, preços, estoque, reservas</a> · <a href="#outbound" class="text-[#F97316]">insumos do produto, pré-cadastro de insumo, consumo</a></p>
+            <p class="text-[12px] text-[#888888] mt-3">Itens do catálogo: <a href="#inbound" class="text-[#AF0914]">insumos, preços, estoque, reservas</a> · <a href="#outbound" class="text-[#AF0914]">insumos do produto, pré-cadastro de insumo, consumo</a></p>
           </div>
         </div>
 
@@ -203,7 +219,7 @@
     <section id="inbound" class="py-14 md:py-20 border-b border-[#E5E5E5] scroll-mt-28">
       <div class="max-w-4xl mx-auto px-4 md:px-8">
         <div class="flex items-center gap-3 mb-3">
-          <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase">Do ERP para o PLM</p>
+          <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase">Do ERP para o PLM</p>
           <span class="text-[11px] font-semibold text-[#888888] bg-[#F0F0F0] px-2 py-0.5 rounded-full">16 possibilidades</span>
         </div>
         <h2 class="text-[24px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-4">
@@ -212,11 +228,11 @@
         <p class="text-[15px] leading-[1.8] text-[#555555] mb-4 max-w-2xl">
           Dados que saem do ERP e passam a estar disponíveis dentro do PLM Coleção Moda, sem ninguém redigitar. Nas linhas abaixo, insumo abrange tanto materiais, ou seja, tecidos e matérias-primas, quanto aviamentos.
         </p>
-        <p class="text-[14px] leading-[1.8] text-[#666666] mb-10 max-w-2xl border-l-2 border-[#FED7AA] pl-4">
-          Insumo também percorre o caminho inverso. Se na sua empresa o material e a composição nascem no PLM e precisam chegar ao ERP, os itens correspondentes estão em <a href="#outbound" class="text-[#F97316] font-medium">Do PLM para o ERP</a>: insumos do produto, pré-cadastro de insumo e consumo. A direção de cada um é escolhida no levantamento.
+        <p class="text-[14px] leading-[1.8] text-[#666666] mb-10 max-w-2xl border-l-2 border-[#FEC3C6] pl-4">
+          Insumo também percorre o caminho inverso. Se na sua empresa o material e a composição nascem no PLM e precisam chegar ao ERP, os itens correspondentes estão em <a href="#outbound" class="text-[#AF0914] font-medium">Do PLM para o ERP</a>: insumos do produto, pré-cadastro de insumo e consumo. A direção de cada um é escolhida no levantamento.
         </p>
 
-        <p class="text-[11px] text-[#999999] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#E5E5E5]">Insumos</p>
+        <p class="text-[11px] text-[#888888] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#E5E5E5]">Insumos</p>
         <div>
           <div class="row">
             <p class="text-[14px] font-semibold text-[#111111]">Materiais</p>
@@ -244,7 +260,7 @@
           </div>
         </div>
 
-        <p class="text-[11px] text-[#999999] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#E5E5E5] mt-12">Cadastros base</p>
+        <p class="text-[11px] text-[#888888] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#E5E5E5] mt-12">Cadastros base</p>
         <div>
           <div class="row">
             <p class="text-[14px] font-semibold text-[#111111]">Fornecedores</p>
@@ -272,7 +288,7 @@
           </div>
         </div>
 
-        <p class="text-[11px] text-[#999999] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#E5E5E5] mt-12">Produto</p>
+        <p class="text-[11px] text-[#888888] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#E5E5E5] mt-12">Produto</p>
         <div>
           <div class="row">
             <p class="text-[14px] font-semibold text-[#111111]">Preços de produto</p>
@@ -298,7 +314,7 @@
     <section id="outbound" class="py-14 md:py-20 border-b border-[#E5E5E5] bg-[#F7F7F7] scroll-mt-28">
       <div class="max-w-4xl mx-auto px-4 md:px-8">
         <div class="flex items-center gap-3 mb-3">
-          <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase">Do PLM para o ERP</p>
+          <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase">Do PLM para o ERP</p>
           <span class="text-[11px] font-semibold text-[#888888] bg-[#EDEDED] px-2 py-0.5 rounded-full">13 possibilidades</span>
         </div>
         <h2 class="text-[24px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-4">
@@ -308,7 +324,7 @@
           Dados criados durante o desenvolvimento no PLM Coleção Moda e enviados ao ERP, eliminando a redigitação e o erro que vem junto com ela.
         </p>
 
-        <p class="text-[11px] text-[#999999] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#DDDDDD]">Produto</p>
+        <p class="text-[11px] text-[#888888] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#DDDDDD]">Produto</p>
         <div>
           <div class="row">
             <p class="text-[14px] font-semibold text-[#111111]">Produto</p>
@@ -336,7 +352,7 @@
           </div>
         </div>
 
-        <p class="text-[11px] text-[#999999] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#DDDDDD] mt-12">Custo e preço</p>
+        <p class="text-[11px] text-[#888888] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#DDDDDD] mt-12">Custo e preço</p>
         <div>
           <div class="row">
             <p class="text-[14px] font-semibold text-[#111111]">Custo e pré-custo</p>
@@ -348,7 +364,7 @@
           </div>
         </div>
 
-        <p class="text-[11px] text-[#999999] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#DDDDDD] mt-12">Insumos e cores</p>
+        <p class="text-[11px] text-[#888888] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#DDDDDD] mt-12">Insumos e cores</p>
         <div>
           <div class="row">
             <p class="text-[14px] font-semibold text-[#111111]">Cores da coleção</p>
@@ -364,7 +380,7 @@
           </div>
         </div>
 
-        <p class="text-[11px] text-[#999999] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#DDDDDD] mt-12">Documentos e rastreabilidade</p>
+        <p class="text-[11px] text-[#888888] font-semibold tracking-wide uppercase mb-1 pb-3 border-b border-[#DDDDDD] mt-12">Documentos e rastreabilidade</p>
         <div>
           <div class="row">
             <p class="text-[14px] font-semibold text-[#111111]">Anexar documentos no ERP</p>
@@ -381,14 +397,14 @@
     <!-- CTA INLINE -->
     <section class="py-12 md:py-16 border-b border-[#E5E5E5]">
       <div class="max-w-3xl mx-auto px-4 md:px-8">
-        <div class="bg-[#FFF7ED] border border-[#FED7AA] rounded-xl px-6 py-7 md:px-8 md:py-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
+        <div class="bg-[#FEE7E8] border border-[#FEC3C6] rounded-xl px-6 py-7 md:px-8 md:py-8 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
           <div class="flex-1">
             <p class="text-[16px] md:text-[17px] font-bold text-[#111111] mb-1.5">Não precisa ligar tudo de uma vez.</p>
-            <p class="text-[14px] leading-[1.75] text-[#7C2D12]">
+            <p class="text-[14px] leading-[1.75] text-[#8C0710]">
               A maioria das empresas começa por dois ou três fluxos que resolvem a maior parte da digitação, e amplia depois. Conte qual é a sua dor maior hoje e a gente indica por onde começar.
             </p>
           </div>
-          <a href="mailto:contato@setbox.com.br" class="flex-shrink-0 text-[14px] bg-[#F97316] text-white px-6 py-3 rounded-[6px] hover:bg-[#EA580C] transition-colors font-semibold text-center whitespace-nowrap">
+          <a href="mailto:contato@setbox.com.br" class="flex-shrink-0 text-[14px] bg-[#AF0914] text-white px-6 py-3 rounded-[6px] hover:bg-[#8C0710] transition-colors font-semibold text-center whitespace-nowrap">
             Falar com a equipe →
           </a>
         </div>
@@ -399,7 +415,7 @@
     <section id="terceiros" class="py-14 md:py-20 border-b border-[#E5E5E5] scroll-mt-28">
       <div class="max-w-4xl mx-auto px-4 md:px-8">
         <div class="flex items-center gap-3 mb-3">
-          <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase">Além do ERP</p>
+          <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase">Além do ERP</p>
           <span class="text-[11px] font-semibold text-[#888888] bg-[#F0F0F0] px-2 py-0.5 rounded-full">3 possibilidades</span>
         </div>
         <h2 class="text-[24px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-4">
@@ -430,7 +446,7 @@
     <section id="automacoes" class="py-14 md:py-20 border-b border-[#E5E5E5] bg-[#F7F7F7] scroll-mt-28">
       <div class="max-w-4xl mx-auto px-4 md:px-8">
         <div class="flex items-center gap-3 mb-3">
-          <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase">Automações internas</p>
+          <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase">Automações internas</p>
           <span class="text-[11px] font-semibold text-[#888888] bg-[#EDEDED] px-2 py-0.5 rounded-full">5 automações</span>
         </div>
         <h2 class="text-[24px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-4">
@@ -444,27 +460,27 @@
           <div class="bg-white border border-[#E5E5E5] rounded-xl p-5">
             <p class="text-[14px] font-semibold text-[#111111] mb-2">Iniciar fluxos de trabalho</p>
             <p class="text-[13px] leading-[1.75] text-[#555555] mb-3">Quando as condições definidas pela sua empresa são atendidas, o próximo fluxo começa sozinho, sem depender de alguém lembrar de iniciar.</p>
-            <p class="text-[12px] leading-[1.7] text-[#888888] border-l-2 border-[#FED7AA] pl-3">Produto com ficha aprovada e insumos definidos inicia o fluxo de modelagem.</p>
+            <p class="text-[12px] leading-[1.7] text-[#888888] border-l-2 border-[#FEC3C6] pl-3">Produto com ficha aprovada e insumos definidos inicia o fluxo de modelagem.</p>
           </div>
           <div class="bg-white border border-[#E5E5E5] rounded-xl p-5">
             <p class="text-[14px] font-semibold text-[#111111] mb-2">Iniciar fluxo ao avançar de etapa</p>
             <p class="text-[13px] leading-[1.75] text-[#555555] mb-3">A entrada do produto em uma etapa específica dispara um novo fluxo, encadeando as áreas envolvidas.</p>
-            <p class="text-[12px] leading-[1.7] text-[#888888] border-l-2 border-[#FED7AA] pl-3">Ao entrar em "Piloto aprovado", o fluxo de custos começa automaticamente.</p>
+            <p class="text-[12px] leading-[1.7] text-[#888888] border-l-2 border-[#FEC3C6] pl-3">Ao entrar em "Piloto aprovado", o fluxo de custos começa automaticamente.</p>
           </div>
           <div class="bg-white border border-[#E5E5E5] rounded-xl p-5">
             <p class="text-[14px] font-semibold text-[#111111] mb-2">Calcular tabelas do produto</p>
             <p class="text-[13px] leading-[1.75] text-[#555555] mb-3">Calculadoras de custo, preço, quantidade e consumo são executadas automaticamente conforme a regra de negócio da empresa.</p>
-            <p class="text-[12px] leading-[1.7] text-[#888888] border-l-2 border-[#FED7AA] pl-3">Tabela de preço por canal recalculada com impostos e markup a cada mudança de custo.</p>
+            <p class="text-[12px] leading-[1.7] text-[#888888] border-l-2 border-[#FEC3C6] pl-3">Tabela de preço por canal recalculada com impostos e markup a cada mudança de custo.</p>
           </div>
           <div class="bg-white border border-[#E5E5E5] rounded-xl p-5">
             <p class="text-[14px] font-semibold text-[#111111] mb-2">Preencher e validar campos</p>
             <p class="text-[13px] leading-[1.75] text-[#555555] mb-3">Campos são preenchidos ou validados automaticamente, como geração de código interno e indicadores de disponibilidade.</p>
-            <p class="text-[12px] leading-[1.7] text-[#888888] border-l-2 border-[#FED7AA] pl-3">Código interno gerado no cadastro, e um campo indica se o produto já pode seguir para pré-cadastro.</p>
+            <p class="text-[12px] leading-[1.7] text-[#888888] border-l-2 border-[#FEC3C6] pl-3">Código interno gerado no cadastro, e um campo indica se o produto já pode seguir para pré-cadastro.</p>
           </div>
           <div class="bg-white border border-[#E5E5E5] rounded-xl p-5 md:col-span-2">
             <p class="text-[14px] font-semibold text-[#111111] mb-2">Dividir fluxos de trabalho</p>
             <p class="text-[13px] leading-[1.75] text-[#555555] mb-3">Um fluxo pode ser dividido automaticamente conforme a característica do produto, direcionando cada caminho para a área correta.</p>
-            <p class="text-[12px] leading-[1.7] text-[#888888] border-l-2 border-[#FED7AA] pl-3">Peça com bordado e peça lisa seguem caminhos diferentes a partir da mesma etapa.</p>
+            <p class="text-[12px] leading-[1.7] text-[#888888] border-l-2 border-[#FEC3C6] pl-3">Peça com bordado e peça lisa seguem caminhos diferentes a partir da mesma etapa.</p>
           </div>
         </div>
       </div>
@@ -473,7 +489,7 @@
     <!-- MOMENTOS -->
     <section id="momentos" class="py-14 md:py-20 border-b border-[#E5E5E5] scroll-mt-28">
       <div class="max-w-4xl mx-auto px-4 md:px-8">
-        <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3">Quando cada integração acontece</p>
+        <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-3">Quando cada integração acontece</p>
         <h2 class="text-[24px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-4">
           Cada dado tem o seu momento certo.
         </h2>
@@ -486,8 +502,8 @@
             <table class="w-full text-[13px]">
               <thead class="bg-[#FAFAFA]">
                 <tr class="border-b border-[#F0F0F0]">
-                  <th class="text-left text-[#999999] font-medium px-5 md:px-6 py-3 whitespace-nowrap">Momento</th>
-                  <th class="text-left text-[#999999] font-medium px-4 py-3">Uso típico</th>
+                  <th class="text-left text-[#888888] font-medium px-5 md:px-6 py-3 whitespace-nowrap">Momento</th>
+                  <th class="text-left text-[#888888] font-medium px-4 py-3">Uso típico</th>
                 </tr>
               </thead>
               <tbody>
@@ -525,7 +541,7 @@
     <!-- AVALIAÇÃO -->
     <section id="avaliacao" class="py-14 md:py-20 border-b border-[#E5E5E5] bg-[#F7F7F7] scroll-mt-28">
       <div class="max-w-4xl mx-auto px-4 md:px-8">
-        <p class="text-[11px] text-[#F97316] font-semibold tracking-wide uppercase mb-3">Como avaliamos o seu cenário</p>
+        <p class="text-[11px] text-[#AF0914] font-semibold tracking-wide uppercase mb-3">Como avaliamos o seu cenário</p>
         <h2 class="text-[24px] md:text-[32px] font-bold leading-[1.2] tracking-tight text-[#111111] mb-4">
           Seis passos até a integração rodando em produção.
         </h2>
@@ -574,7 +590,7 @@
         </div>
 
         <p class="text-[14px] leading-[1.8] text-[#666666] mt-10 pt-8 border-t border-[#E0E0E0] max-w-2xl">
-          Itens fora desta lista podem ser avaliados caso a caso. Dúvidas sobre prazo, pré-requisitos, falhas e cobrança estão respondidas nas <a href="faq.html" class="text-[#F97316] font-medium">perguntas frequentes</a>.
+          Itens fora desta lista podem ser avaliados caso a caso. Dúvidas sobre prazo, pré-requisitos, falhas e cobrança estão respondidas nas <a href="faq.html" class="text-[#AF0914] font-medium">perguntas frequentes</a>.
         </p>
       </div>
     </section>
@@ -582,8 +598,8 @@
     <!-- CHECKLIST DE ESCOPO -->
     <section class="py-14 md:py-20 border-b border-[#E5E5E5]">
       <div class="max-w-3xl mx-auto px-4 md:px-8">
-        <div class="bg-[#FFF7ED] border border-[#FED7AA] rounded-xl p-6 md:p-8">
-          <span class="text-[11px] font-semibold text-[#9A3412] uppercase tracking-wider">Checklist de escopo</span>
+        <div class="bg-[#FEE7E8] border border-[#FEC3C6] rounded-xl p-6 md:p-8">
+          <span class="text-[11px] font-semibold text-[#AF0914] uppercase tracking-wider">Checklist de escopo</span>
           <h2 class="text-[22px] md:text-[26px] font-bold leading-[1.2] tracking-tight text-[#111111] mt-2 mb-3">
             Uma planilha para você marcar o que a sua empresa precisa
           </h2>
@@ -596,7 +612,7 @@
             Enviamos por e-mail, sem compromisso. Preenchida, ela é o que usamos para dimensionar prazo e escopo.
           </p>
           <a href="mailto:contato@setbox.com.br?subject=Checklist%20de%20escopo%20-%20Integra%20Moda&body=Ol%C3%A1%2C%20gostaria%20de%20receber%20o%20checklist%20de%20escopo.%0A%0AEmpresa%3A%0AERP%20utilizado%3A%0ANome%20e%20telefone%3A%0A"
-             class="inline-block w-full sm:w-auto text-center text-[14px] bg-[#F97316] text-white px-6 py-3 rounded-[6px] hover:bg-[#EA580C] transition-colors font-semibold">
+             class="inline-block w-full sm:w-auto text-center text-[14px] bg-[#AF0914] text-white px-6 py-3 rounded-[6px] hover:bg-[#8C0710] transition-colors font-semibold">
             Receber o checklist por e-mail →
           </a>
         </div>
@@ -613,15 +629,15 @@
           Em uma conversa levantamos o seu cenário, verificamos o que o seu ERP disponibiliza e dizemos com clareza o que é possível, sem promessa genérica.
         </p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <a href="mailto:contato@setbox.com.br" class="w-full sm:w-auto text-[14px] bg-[#F97316] text-white px-6 py-3 rounded-[6px] hover:bg-[#EA580C] transition-colors font-semibold">
+          <a href="mailto:contato@setbox.com.br" class="w-full sm:w-auto text-[14px] bg-[#AF0914] text-white px-6 py-3 rounded-[6px] hover:bg-[#8C0710] transition-colors font-semibold">
             Agendar uma conversa →
           </a>
           <a href="faq.html" class="text-[14px] text-[#888888] hover:text-[#111111] transition-colors font-medium">
             Ver perguntas frequentes
           </a>
         </div>
-        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-[13px] text-[#999999]">
-          <a href="mailto:contato@setbox.com.br" class="hover:text-[#F97316] transition-colors">contato@setbox.com.br</a>
+        <div class="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-[13px] text-[#888888]">
+          <a href="mailto:contato@setbox.com.br" class="hover:text-[#AF0914] transition-colors">contato@setbox.com.br</a>
           <span class="hidden sm:inline">·</span>
           <a href="https://wa.me/5541999073688" target="_blank" rel="noopener" class="hover:text-[#111111] transition-colors">(41) 99907-3688</a>
           <span class="hidden sm:inline">·</span>
@@ -633,47 +649,51 @@
   </main>
 
   <!-- Footer -->
-  <footer class="border-t border-[#E5E5E5]">
-    <div class="max-w-5xl mx-auto px-4 md:px-8 py-10 md:py-14 flex flex-col md:flex-row gap-10 md:gap-16">
-      <div class="flex-shrink-0 md:min-w-[180px]">
-        <a href="https://setbox.com.br" target="_blank" rel="noopener"><img src="assets/logo-setbox.png" alt="Setbox" class="h-9 w-auto mb-4 opacity-50 hover:opacity-100 transition-opacity"></a>
-        <p class="text-[12px] text-[#BBBBBB]">© 2026 Setbox Serviços Digitais</p>
-        <p class="text-[12px] text-[#BBBBBB] mt-3 leading-relaxed">
-          Av. Carneiro Leão, 563 - Zona 01<br>
-          Maringá / PR - 87014-010
-        </p>
-        <p class="text-[12px] text-[#BBBBBB] mt-3">CNPJ 08.889.601/0001-09</p>
+  <footer class="bg-[#111111]">
+    <div class="max-w-5xl mx-auto px-4 md:px-8 py-10 md:py-14">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="col-span-2 md:col-span-1">
+          <a href="index.html"><img src="assets/logo-horizontal-dark.svg" alt="Integra Moda" class="h-11 w-auto"></a>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-white mb-4">Produto</p>
+          <ul class="space-y-2.5">
+            <li><a href="index.html#como-funciona" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Como funciona</a></li>
+            <li><a href="integracoes.html" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Integrações</a></li>
+            <li><a href="index.html#erps" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">ERPs suportados</a></li>
+            <li><a href="index.html#precos" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Preços</a></li>
+            <li><a href="faq.html" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Perguntas frequentes</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-white mb-4">Clientes</p>
+          <ul class="space-y-2.5">
+            <li><a href="https://app.integramoda.com.br" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Entrar na plataforma</a></li>
+            <li><a href="mailto:contato@setbox.com.br" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Suporte</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-[12px] font-semibold text-white mb-4">Empresa</p>
+          <ul class="space-y-2.5">
+            <li><a href="https://setbox.com.br" target="_blank" rel="noopener" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Setbox</a></li>
+            <li><a href="mailto:contato@setbox.com.br" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Contato</a></li>
+            <li><a href="privacidade.html" class="text-[12px] text-[#A8A8A8] hover:text-white transition-colors">Política de privacidade</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="grid grid-cols-3 gap-6 md:gap-12 flex-1">
-        <div>
-          <p class="text-[12px] font-semibold text-[#111111] mb-4">Produto</p>
-          <ul class="space-y-2.5">
-            <li><a href="index.html#como-funciona" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Como funciona</a></li>
-            <li><a href="integracoes.html" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Integrações</a></li>
-            <li><a href="index.html#erps" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">ERPs suportados</a></li>
-            <li><a href="index.html#precos" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Preços</a></li>
-            <li><a href="faq.html" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Perguntas frequentes</a></li>
-            <li><a href="#" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Documentação</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-[12px] font-semibold text-[#111111] mb-4">Empresa</p>
-          <ul class="space-y-2.5">
-            <li><a href="https://setbox.com.br" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Setbox</a></li>
-            <li><a href="mailto:contato@setbox.com.br" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Contato</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-[12px] font-semibold text-[#111111] mb-4">Legal</p>
-          <ul class="space-y-2.5">
-            <li><a href="#" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Privacidade</a></li>
-            <li><a href="#" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">Termos de Uso</a></li>
-            <li><a href="#" class="text-[12px] text-[#888888] hover:text-[#111111] transition-colors">LGPD</a></li>
-          </ul>
-        </div>
+      <div class="mt-10 pt-6 border-t border-[#2A2A2A] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <a href="https://setbox.com.br" target="_blank" rel="noopener" class="flex items-center gap-2.5 text-[12px] text-[#888888] hover:text-white transition-colors self-start md:self-auto">Um produto <img src="assets/setbox-lockup-escuro.svg" alt="Setbox" class="h-5 w-auto" width="1284" height="380"></a>
+        <p class="text-[12px] leading-[1.7] text-[#888888] md:text-right">© 2026 Setbox Serviços Digitais · SETBOX INFORMATICA LTDA · CNPJ 08.889.601/0001-09<br>Av. Carneiro Leão, 563 - Zona 01, Maringá / PR - 87014-010</p>
       </div>
     </div>
   </footer>
 
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      var menu = document.getElementById('nav-menu');
+      menu.classList.toggle('hidden');
+      this.setAttribute('aria-expanded', String(!menu.classList.contains('hidden')));
+    });
+  </script>
 </body>
 </html>
